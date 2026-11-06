@@ -425,7 +425,7 @@ button{cursor:pointer}
 }
 
 /* Plum: bold outline. Heavy borders and hard offset shadows. */
-:root{--r-s:6px!important;--r:8px!important;--r-l:10px!important;--line:#271628!important;--line-2:#271628!important}
+:root{--data:#741959!important;--ink-3:#5E4F5F!important;--r-s:6px!important;--r:8px!important;--r-l:10px!important;--line:#271628!important;--line-2:#271628!important}
 .card{border:2px solid #271628!important;box-shadow:4px 4px 0 #271628!important}
 .stats.card{background:#fff!important;border-width:2px!important;border-radius:10px!important;padding:0 18px!important;box-shadow:4px 4px 0 #8E1F6E!important}
 .btn{border:2px solid #271628!important;font-weight:700!important;box-shadow:2px 2px 0 #271628!important}

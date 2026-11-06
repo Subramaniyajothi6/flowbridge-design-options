@@ -42,14 +42,8 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
 :focus-visible{outline:2px solid currentColor;outline-offset:2px}
 .stylelabel{margin:6px 0 0;font-weight:600}
 .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.go,.pick{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 16px;border-radius:8px;font:inherit;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer}
+.go{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 16px;border-radius:8px;font:inherit;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer}
 .go{background:var(--fg);color:var(--bg);border:1px solid var(--fg)}
-.pick{background:var(--surface);color:var(--fg);border:1px solid var(--line)}
-.pick:hover{border-color:var(--fg-2)}
-.pick[aria-pressed="true"]{background:var(--ok);border-color:var(--ok);color:#fff}
-.res{position:sticky;bottom:12px;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:32px;padding:14px 16px;background:var(--surface);border:1px solid var(--fg-2);border-radius:10px}
-.res[hidden]{display:none}
-.res-s{font-size:13px;color:var(--fg-2)}
 .foot{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);color:var(--fg-2);font-size:14px;max-width:70ch}
 .box{position:fixed;inset:0;z-index:20;background:var(--scrim);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .box[hidden]{display:none}
@@ -62,7 +56,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
 <div class="wrap">
   <header>
     <h1>Which look should FlowBridge continue with?</h1>
-    <p class="lead">Here are five directions, each with its own colours, fonts and style. Open each one and try it, because every option is the full working prototype. Then choose one below and send your choice back.</p>
+    <p class="lead">Here are five directions, each with its own colours, fonts and style. Open each one and try it, because every option is the full working prototype.</p>
     <nav class="glance" aria-label="Jump to an option">
       <a href="#option-a"><img src="shots/a-home.jpg" alt="Home page in option A">A. Signal</a>
       <a href="#option-b"><img src="shots/b-home.jpg" alt="Home page in option B">B. Harbor</a>
@@ -77,7 +71,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
         <div class="nm"><h2 id="t-a">A. Signal</h2><span class="tag">Current design</span></div>
         <p class="stylelabel">Glowing and technical</p>
         <p class="feel">Indigo with a violet glow, medium corners and soft depth. The most familiar look for automation products.</p>
-        <div class="acts"><a class="go" href="a/index.html">Open live design</a><button class="pick" type="button" data-opt="A" data-name="Signal" aria-pressed="false">Choose A</button></div>
+        <div class="acts"><a class="go" href="a/index.html">Open live design</a></div>
       </div>
       <div class="spec">
         <div><div class="sample" style="font-family:'Schibsted Grotesk',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: Schibsted Grotesk. Data font: <span style="font-family:'JetBrains Mono',monospace">JetBrains Mono</span></div></div>
@@ -92,7 +86,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
         <div class="nm"><h2 id="t-b">B. Harbor</h2></div>
         <p class="stylelabel">Structured and enterprise</p>
         <p class="feel">Deep teal, square corners, a dark sidebar and flat surfaces. Calm and dependable for operations teams.</p>
-        <div class="acts"><a class="go" href="b/index.html">Open live design</a><button class="pick" type="button" data-opt="B" data-name="Harbor" aria-pressed="false">Choose B</button></div>
+        <div class="acts"><a class="go" href="b/index.html">Open live design</a></div>
       </div>
       <div class="spec">
         <div><div class="sample" style="font-family:'IBM Plex Sans',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: IBM Plex Sans. Data font: <span style="font-family:'IBM Plex Mono',monospace">IBM Plex Mono</span></div></div>
@@ -107,7 +101,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
         <div class="nm"><h2 id="t-c">C. Ember</h2></div>
         <p class="stylelabel">Soft and friendly</p>
         <p class="feel">Burnt orange on warm paper, pill buttons, large corners and floating cards. The most approachable option.</p>
-        <div class="acts"><a class="go" href="c/index.html">Open live design</a><button class="pick" type="button" data-opt="C" data-name="Ember" aria-pressed="false">Choose C</button></div>
+        <div class="acts"><a class="go" href="c/index.html">Open live design</a></div>
       </div>
       <div class="spec">
         <div><div class="sample" style="font-family:'Manrope',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: Manrope. Data font: <span style="font-family:'DM Mono',monospace">DM Mono</span></div></div>
@@ -122,7 +116,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
         <div class="nm"><h2 id="t-d">D. Plum</h2></div>
         <p class="stylelabel">Bold outline</p>
         <p class="feel">Rich plum, heavy outlines and hard offset shadows. The most distinctive and memorable option.</p>
-        <div class="acts"><a class="go" href="d/index.html">Open live design</a><button class="pick" type="button" data-opt="D" data-name="Plum" aria-pressed="false">Choose D</button></div>
+        <div class="acts"><a class="go" href="d/index.html">Open live design</a></div>
       </div>
       <div class="spec">
         <div><div class="sample" style="font-family:'Plus Jakarta Sans',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: Plus Jakarta Sans. Data font: <span style="font-family:'Fira Code',monospace">Fira Code</span></div></div>
@@ -137,7 +131,7 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
         <div class="nm"><h2 id="t-e">E. Graphite</h2></div>
         <p class="stylelabel">Quiet and minimal</p>
         <p class="feel">Neutral greys with one clear blue, thin lines, no glow and no shadows. The workflow stays the focus.</p>
-        <div class="acts"><a class="go" href="e/index.html">Open live design</a><button class="pick" type="button" data-opt="E" data-name="Graphite" aria-pressed="false">Choose E</button></div>
+        <div class="acts"><a class="go" href="e/index.html">Open live design</a></div>
       </div>
       <div class="spec">
         <div><div class="sample" style="font-family:'Geist',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: Geist. Data font: <span style="font-family:'Geist Mono',monospace">Geist Mono</span></div></div>
@@ -146,7 +140,6 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
     </div>
     <div class="shots"><button class="shot" type="button" data-src="shots/e-home.jpg" data-cap="Option E, Graphite: Home page" aria-label="Enlarge Home page for option E"><img src="shots/e-home.jpg" alt="Home page in option E, Graphite" loading="lazy"><span>Home page</span></button><button class="shot" type="button" data-src="shots/e-overview.jpg" data-cap="Option E, Graphite: Overview" aria-label="Enlarge Overview for option E"><img src="shots/e-overview.jpg" alt="Overview in option E, Graphite" loading="lazy"><span>Overview</span></button><button class="shot" type="button" data-src="shots/e-builder.jpg" data-cap="Option E, Graphite: Workflow builder" aria-label="Enlarge Workflow builder for option E"><img src="shots/e-builder.jpg" alt="Workflow builder in option E, Graphite" loading="lazy"><span>Workflow builder</span></button></div>
   </section>
-  <section class="res" id="res" aria-live="polite" hidden><div><b id="res-t"></b><div class="res-s">Send this message back so your choice is counted.</div></div><button class="go" id="res-c" type="button">Copy message</button></section>
   <p class="foot">Each option is a working copy of the FlowBridge prototype, and all data shown is sample data. To try different roles, open Sign in inside an option. Green, red and amber keep their meaning in every option, for success, failure and warnings.</p>
 </div>
 <div class="box" id="box" role="dialog" aria-modal="true" aria-label="Enlarged screen" hidden>
@@ -162,19 +155,6 @@ h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font
   });
   x.addEventListener('click', close);
   box.addEventListener('click', function (e) { if (e.target === box) close(); });
-  var res = document.getElementById('res'), resT = document.getElementById('res-t'), resC = document.getElementById('res-c'), msg = '';
-  function choose(l, n) {
-    document.querySelectorAll('.pick').forEach(function (p) { var on = p.dataset.opt === l; p.setAttribute('aria-pressed', on ? 'true' : 'false'); p.textContent = on ? 'Chosen' : 'Choose ' + p.dataset.opt; });
-    msg = 'My choice for FlowBridge: Option ' + l + ', ' + n + '.';
-    resT.textContent = msg; res.hidden = false; resC.textContent = 'Copy message';
-    try { localStorage.setItem('fb-choice', l + '|' + n); } catch (e) {}
-  }
-  document.querySelectorAll('.pick').forEach(function (p) { p.addEventListener('click', function () { choose(p.dataset.opt, p.dataset.name); }); });
-  resC.addEventListener('click', function () {
-    var done = function () { resC.textContent = 'Copied'; }, fail = function () { var r = document.createRange(); r.selectNodeContents(resT); var w = getSelection(); w.removeAllRanges(); w.addRange(r); resC.textContent = 'Message selected, press Ctrl+C'; };
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).then(done, fail); else fail();
-  });
-  try { var saved = localStorage.getItem('fb-choice'); if (saved) { var q = saved.split('|'); choose(q[0], q[1]); } } catch (e) {}
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
 })();
 </script>

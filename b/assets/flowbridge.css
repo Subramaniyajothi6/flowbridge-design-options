@@ -425,7 +425,7 @@ button{cursor:pointer}
 }
 
 /* Harbor: structured. Square corners, a dark sidebar, flat surfaces. */
-:root{--r-s:2px!important;--r:3px!important;--r-l:4px!important;--sh-1:none!important;--sh-2:none!important}
+:root{--data:#0A5C6B!important;--r-s:2px!important;--r:3px!important;--r-l:4px!important;--sh-1:none!important;--sh-2:none!important}
 .card,.btn,.input,.select,.area,.chip,.badge,.pop,.modal,.nav,.toast,.node,.seg-ctl,.seg-ctl button{border-radius:3px!important}
 .btn{box-shadow:none!important;font-weight:600!important}
 .side{background:#0A2730!important;border-right-color:#0A2730!important}
