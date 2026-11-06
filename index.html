@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<title>FlowBridge Design Options</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;600;700&family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;600;700&family=Fira+Code:wght@400;500&family=Geist:wght@400;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a neutral review sheet, so the five directions supply all the colour. */
+:root{--bg:#F5F6F8;--surface:#FFFFFF;--fg:#14171F;--fg-2:#555C6B;--line:#DDE0E6;--tag:#E7E9EE;--scrim:rgba(10,12,18,.86);--ok:#0A7445}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111317;--surface:#1A1D23;--fg:#ECEEF2;--fg-2:#A5ABB8;--line:#2E323A;--tag:#2A2E36;--scrim:rgba(0,0,0,.88);--ok:#0A7445;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111317;--surface:#1A1D23;--fg:#ECEEF2;--fg-2:#A5ABB8;--line:#2E323A;--tag:#2A2E36;--scrim:rgba(0,0,0,.88);--ok:#0A7445;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 "Schibsted Grotesk",-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px}
+h1{font-size:clamp(30px,4.4vw,46px);line-height:1.08;letter-spacing:-.035em;font-weight:700;margin:0;text-wrap:balance}
+.lead{max-width:62ch;color:var(--fg-2);margin:12px 0 0}
+.glance{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-top:28px}
+.glance a{display:flex;flex-direction:column;gap:7px;color:var(--fg);text-decoration:none;font-weight:600;font-size:14px;min-width:0}
+.glance img{display:block;width:100%;aspect-ratio:1440/866;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line)}
+.glance a:hover img{border-color:var(--fg-2)}
+.opt{margin-top:52px;padding-top:28px;border-top:1px solid var(--line);scroll-margin-top:12px}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 32px;align-items:start}
+.nm{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.nm h2{font-size:30px;line-height:1.15;letter-spacing:-.025em;font-weight:700;margin:0}
+.tag{font-size:12px;font-weight:600;background:var(--tag);border-radius:999px;padding:3px 10px}
+.feel{margin:8px 0 0;color:var(--fg-2);max-width:52ch}
+.spec{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sample{font-size:25px;line-height:1.15;letter-spacing:-.025em;font-weight:700;overflow-wrap:anywhere}
+.fontnames{font-size:13px;color:var(--fg-2);margin-top:4px}
+.swatches{display:flex;flex-wrap:wrap;gap:8px 16px;list-style:none;margin:0;padding:0}
+.swatches li{display:flex;align-items:center;gap:8px;font-size:13px;min-width:0}
+.swatches i{width:24px;height:24px;border-radius:6px;border:1px solid var(--line);flex:none}
+.swatches small{display:block;font-size:12px;color:var(--fg-2);font-variant-numeric:tabular-nums}
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.shot{display:flex;flex-direction:column;gap:7px;background:none;border:0;padding:0;margin:0;font:inherit;color:var(--fg-2);text-align:left;font-size:13px;cursor:zoom-in;min-width:0}
+.shot img{display:block;width:100%;aspect-ratio:1440/866;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line)}
+.shot:hover img{border-color:var(--fg-2)}
+:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.stylelabel{margin:6px 0 0;font-weight:600}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.go,.pick{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 16px;border-radius:8px;font:inherit;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer}
+.go{background:var(--fg);color:var(--bg);border:1px solid var(--fg)}
+.pick{background:var(--surface);color:var(--fg);border:1px solid var(--line)}
+.pick:hover{border-color:var(--fg-2)}
+.pick[aria-pressed="true"]{background:var(--ok);border-color:var(--ok);color:#fff}
+.res{position:sticky;bottom:12px;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:32px;padding:14px 16px;background:var(--surface);border:1px solid var(--fg-2);border-radius:10px}
+.res[hidden]{display:none}
+.res-s{font-size:13px;color:var(--fg-2)}
+.foot{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);color:var(--fg-2);font-size:14px;max-width:70ch}
+.box{position:fixed;inset:0;z-index:20;background:var(--scrim);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.box[hidden]{display:none}
+.box img{max-width:100%;max-height:calc(100% - 70px);border-radius:8px;display:block}
+.box-b{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px;color:#fff;font-size:14px}
+.box button{font:inherit;font-weight:600;color:#14171F;background:#fff;border:0;border-radius:7px;height:36px;padding:0 14px;cursor:pointer}
+@media (max-width:820px){.glance{grid-template-columns:repeat(3,minmax(0,1fr))}.head,.shots{grid-template-columns:minmax(0,1fr)}.wrap{padding-block:28px 48px}}
+@media (max-width:480px){.glance{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<div class="wrap">
+  <header>
+    <h1>Which look should FlowBridge continue with?</h1>
+    <p class="lead">Here are five directions, each with its own colours, fonts and style. Open each one and try it, because every option is the full working prototype. Then choose one below and send your choice back.</p>
+    <nav class="glance" aria-label="Jump to an option">
+      <a href="#option-a"><img src="shots/a-home.jpg" alt="Home page in option A">A. Signal</a>
+      <a href="#option-b"><img src="shots/b-home.jpg" alt="Home page in option B">B. Harbor</a>
+      <a href="#option-c"><img src="shots/c-home.jpg" alt="Home page in option C">C. Ember</a>
+      <a href="#option-d"><img src="shots/d-home.jpg" alt="Home page in option D">D. Plum</a>
+      <a href="#option-e"><img src="shots/e-home.jpg" alt="Home page in option E">E. Graphite</a>
+    </nav>
+  </header>
+  <section class="opt" id="option-a" aria-labelledby="t-a">
+    <div class="head">
+      <div>
+        <div class="nm"><h2 id="t-a">A. Signal</h2><span class="tag">Current design</span></div>
+        <p class="stylelabel">Glowing and technical</p>
+        <p class="feel">Indigo with a violet glow, medium corners and soft depth. The most familiar look for automation products.</p>
+        <div class="acts"><a class="go" href="a/index.html">Open live design</a><button class="pick" type="button" data-opt="A" data-name="Signal" aria-pressed="false">Choose A</button></div>
+      </div>
+      <div class="spec">
+        <div><div class="sample" style="font-family:'Schibsted Grotesk',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: Schibsted Grotesk. Data font: <span style="font-family:'JetBrains Mono',monospace">JetBrains Mono</span></div></div>
+        <ul class="swatches"><li><i style="background:#3538E8"></i><span>Action<small>#3538E8</small></span></li><li><i style="background:#060A1A"></i><span>Dark background<small>#060A1A</small></span></li><li><i style="background:#F6F7FA"></i><span>Page background<small>#F6F7FA</small></span></li><li><i style="background:#0E1730"></i><span>Text<small>#0E1730</small></span></li></ul>
+      </div>
+    </div>
+    <div class="shots"><button class="shot" type="button" data-src="shots/a-home.jpg" data-cap="Option A, Signal: Home page" aria-label="Enlarge Home page for option A"><img src="shots/a-home.jpg" alt="Home page in option A, Signal" loading="lazy"><span>Home page</span></button><button class="shot" type="button" data-src="shots/a-overview.jpg" data-cap="Option A, Signal: Overview" aria-label="Enlarge Overview for option A"><img src="shots/a-overview.jpg" alt="Overview in option A, Signal" loading="lazy"><span>Overview</span></button><button class="shot" type="button" data-src="shots/a-builder.jpg" data-cap="Option A, Signal: Workflow builder" aria-label="Enlarge Workflow builder for option A"><img src="shots/a-builder.jpg" alt="Workflow builder in option A, Signal" loading="lazy"><span>Workflow builder</span></button></div>
+  </section>
+  <section class="opt" id="option-b" aria-labelledby="t-b">
+    <div class="head">
+      <div>
+        <div class="nm"><h2 id="t-b">B. Harbor</h2></div>
+        <p class="stylelabel">Structured and enterprise</p>
+        <p class="feel">Deep teal, square corners, a dark sidebar and flat surfaces. Calm and dependable for operations teams.</p>
+        <div class="acts"><a class="go" href="b/index.html">Open live design</a><button class="pick" type="button" data-opt="B" data-name="Harbor" aria-pressed="false">Choose B</button></div>
+      </div>
+      <div class="spec">
+        <div><div class="sample" style="font-family:'IBM Plex Sans',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: IBM Plex Sans. Data font: <span style="font-family:'IBM Plex Mono',monospace">IBM Plex Mono</span></div></div>
+        <ul class="swatches"><li><i style="background:#0B7285"></i><span>Action<small>#0B7285</small></span></li><li><i style="background:#081218"></i><span>Dark background<small>#081218</small></span></li><li><i style="background:#F6F8FA"></i><span>Page background<small>#F6F8FA</small></span></li><li><i style="background:#11222D"></i><span>Text<small>#11222D</small></span></li></ul>
+      </div>
+    </div>
+    <div class="shots"><button class="shot" type="button" data-src="shots/b-home.jpg" data-cap="Option B, Harbor: Home page" aria-label="Enlarge Home page for option B"><img src="shots/b-home.jpg" alt="Home page in option B, Harbor" loading="lazy"><span>Home page</span></button><button class="shot" type="button" data-src="shots/b-overview.jpg" data-cap="Option B, Harbor: Overview" aria-label="Enlarge Overview for option B"><img src="shots/b-overview.jpg" alt="Overview in option B, Harbor" loading="lazy"><span>Overview</span></button><button class="shot" type="button" data-src="shots/b-builder.jpg" data-cap="Option B, Harbor: Workflow builder" aria-label="Enlarge Workflow builder for option B"><img src="shots/b-builder.jpg" alt="Workflow builder in option B, Harbor" loading="lazy"><span>Workflow builder</span></button></div>
+  </section>
+  <section class="opt" id="option-c" aria-labelledby="t-c">
+    <div class="head">
+      <div>
+        <div class="nm"><h2 id="t-c">C. Ember</h2></div>
+        <p class="stylelabel">Soft and friendly</p>
+        <p class="feel">Burnt orange on warm paper, pill buttons, large corners and floating cards. The most approachable option.</p>
+        <div class="acts"><a class="go" href="c/index.html">Open live design</a><button class="pick" type="button" data-opt="C" data-name="Ember" aria-pressed="false">Choose C</button></div>
+      </div>
+      <div class="spec">
+        <div><div class="sample" style="font-family:'Manrope',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: Manrope. Data font: <span style="font-family:'DM Mono',monospace">DM Mono</span></div></div>
+        <ul class="swatches"><li><i style="background:#C2410C"></i><span>Action<small>#C2410C</small></span></li><li><i style="background:#14100C"></i><span>Dark background<small>#14100C</small></span></li><li><i style="background:#F9F8F7"></i><span>Page background<small>#F9F8F7</small></span></li><li><i style="background:#261F18"></i><span>Text<small>#261F18</small></span></li></ul>
+      </div>
+    </div>
+    <div class="shots"><button class="shot" type="button" data-src="shots/c-home.jpg" data-cap="Option C, Ember: Home page" aria-label="Enlarge Home page for option C"><img src="shots/c-home.jpg" alt="Home page in option C, Ember" loading="lazy"><span>Home page</span></button><button class="shot" type="button" data-src="shots/c-overview.jpg" data-cap="Option C, Ember: Overview" aria-label="Enlarge Overview for option C"><img src="shots/c-overview.jpg" alt="Overview in option C, Ember" loading="lazy"><span>Overview</span></button><button class="shot" type="button" data-src="shots/c-builder.jpg" data-cap="Option C, Ember: Workflow builder" aria-label="Enlarge Workflow builder for option C"><img src="shots/c-builder.jpg" alt="Workflow builder in option C, Ember" loading="lazy"><span>Workflow builder</span></button></div>
+  </section>
+  <section class="opt" id="option-d" aria-labelledby="t-d">
+    <div class="head">
+      <div>
+        <div class="nm"><h2 id="t-d">D. Plum</h2></div>
+        <p class="stylelabel">Bold outline</p>
+        <p class="feel">Rich plum, heavy outlines and hard offset shadows. The most distinctive and memorable option.</p>
+        <div class="acts"><a class="go" href="d/index.html">Open live design</a><button class="pick" type="button" data-opt="D" data-name="Plum" aria-pressed="false">Choose D</button></div>
+      </div>
+      <div class="spec">
+        <div><div class="sample" style="font-family:'Plus Jakarta Sans',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: Plus Jakarta Sans. Data font: <span style="font-family:'Fira Code',monospace">Fira Code</span></div></div>
+        <ul class="swatches"><li><i style="background:#8E1F6E"></i><span>Action<small>#8E1F6E</small></span></li><li><i style="background:#150B16"></i><span>Dark background<small>#150B16</small></span></li><li><i style="background:#F9F7F9"></i><span>Page background<small>#F9F7F9</small></span></li><li><i style="background:#271628"></i><span>Text<small>#271628</small></span></li></ul>
+      </div>
+    </div>
+    <div class="shots"><button class="shot" type="button" data-src="shots/d-home.jpg" data-cap="Option D, Plum: Home page" aria-label="Enlarge Home page for option D"><img src="shots/d-home.jpg" alt="Home page in option D, Plum" loading="lazy"><span>Home page</span></button><button class="shot" type="button" data-src="shots/d-overview.jpg" data-cap="Option D, Plum: Overview" aria-label="Enlarge Overview for option D"><img src="shots/d-overview.jpg" alt="Overview in option D, Plum" loading="lazy"><span>Overview</span></button><button class="shot" type="button" data-src="shots/d-builder.jpg" data-cap="Option D, Plum: Workflow builder" aria-label="Enlarge Workflow builder for option D"><img src="shots/d-builder.jpg" alt="Workflow builder in option D, Plum" loading="lazy"><span>Workflow builder</span></button></div>
+  </section>
+  <section class="opt" id="option-e" aria-labelledby="t-e">
+    <div class="head">
+      <div>
+        <div class="nm"><h2 id="t-e">E. Graphite</h2></div>
+        <p class="stylelabel">Quiet and minimal</p>
+        <p class="feel">Neutral greys with one clear blue, thin lines, no glow and no shadows. The workflow stays the focus.</p>
+        <div class="acts"><a class="go" href="e/index.html">Open live design</a><button class="pick" type="button" data-opt="E" data-name="Graphite" aria-pressed="false">Choose E</button></div>
+      </div>
+      <div class="spec">
+        <div><div class="sample" style="font-family:'Geist',sans-serif">Automate your work and see every step.</div><div class="fontnames">Main font: Geist. Data font: <span style="font-family:'Geist Mono',monospace">Geist Mono</span></div></div>
+        <ul class="swatches"><li><i style="background:#1F5FBF"></i><span>Action<small>#1F5FBF</small></span></li><li><i style="background:#0F1011"></i><span>Dark background<small>#0F1011</small></span></li><li><i style="background:#F8F8F8"></i><span>Page background<small>#F8F8F8</small></span></li><li><i style="background:#1D1E21"></i><span>Text<small>#1D1E21</small></span></li></ul>
+      </div>
+    </div>
+    <div class="shots"><button class="shot" type="button" data-src="shots/e-home.jpg" data-cap="Option E, Graphite: Home page" aria-label="Enlarge Home page for option E"><img src="shots/e-home.jpg" alt="Home page in option E, Graphite" loading="lazy"><span>Home page</span></button><button class="shot" type="button" data-src="shots/e-overview.jpg" data-cap="Option E, Graphite: Overview" aria-label="Enlarge Overview for option E"><img src="shots/e-overview.jpg" alt="Overview in option E, Graphite" loading="lazy"><span>Overview</span></button><button class="shot" type="button" data-src="shots/e-builder.jpg" data-cap="Option E, Graphite: Workflow builder" aria-label="Enlarge Workflow builder for option E"><img src="shots/e-builder.jpg" alt="Workflow builder in option E, Graphite" loading="lazy"><span>Workflow builder</span></button></div>
+  </section>
+  <section class="res" id="res" aria-live="polite" hidden><div><b id="res-t"></b><div class="res-s">Send this message back so your choice is counted.</div></div><button class="go" id="res-c" type="button">Copy message</button></section>
+  <p class="foot">Each option is a working copy of the FlowBridge prototype, and all data shown is sample data. To try different roles, open Sign in inside an option. Green, red and amber keep their meaning in every option, for success, failure and warnings.</p>
+</div>
+<div class="box" id="box" role="dialog" aria-modal="true" aria-label="Enlarged screen" hidden>
+  <img id="box-i" alt="">
+  <div class="box-b"><span id="box-c"></span><button id="box-x" type="button">Close</button></div>
+</div>
+<script>
+(function () {
+  var box = document.getElementById('box'), img = document.getElementById('box-i'), cap = document.getElementById('box-c'), x = document.getElementById('box-x'), last = null;
+  function close() { box.hidden = true; img.removeAttribute('src'); if (last) last.focus(); }
+  document.querySelectorAll('.shot').forEach(function (b) {
+    b.addEventListener('click', function () { last = b; img.src = b.dataset.src; img.alt = b.dataset.cap; cap.textContent = b.dataset.cap; box.hidden = false; x.focus(); });
+  });
+  x.addEventListener('click', close);
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+  var res = document.getElementById('res'), resT = document.getElementById('res-t'), resC = document.getElementById('res-c'), msg = '';
+  function choose(l, n) {
+    document.querySelectorAll('.pick').forEach(function (p) { var on = p.dataset.opt === l; p.setAttribute('aria-pressed', on ? 'true' : 'false'); p.textContent = on ? 'Chosen' : 'Choose ' + p.dataset.opt; });
+    msg = 'My choice for FlowBridge: Option ' + l + ', ' + n + '.';
+    resT.textContent = msg; res.hidden = false; resC.textContent = 'Copy message';
+    try { localStorage.setItem('fb-choice', l + '|' + n); } catch (e) {}
+  }
+  document.querySelectorAll('.pick').forEach(function (p) { p.addEventListener('click', function () { choose(p.dataset.opt, p.dataset.name); }); });
+  resC.addEventListener('click', function () {
+    var done = function () { resC.textContent = 'Copied'; }, fail = function () { var r = document.createRange(); r.selectNodeContents(resT); var w = getSelection(); w.removeAllRanges(); w.addRange(r); resC.textContent = 'Message selected, press Ctrl+C'; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(msg).then(done, fail); else fail();
+  });
+  try { var saved = localStorage.getItem('fb-choice'); if (saved) { var q = saved.split('|'); choose(q[0], q[1]); } } catch (e) {}
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !box.hidden) close(); });
+})();
+</script>
+
+</body>
+</html>
