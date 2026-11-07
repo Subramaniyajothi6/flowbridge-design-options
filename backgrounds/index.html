@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>FlowBridge Background Options</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F7F3EE;--fg:#1F1A16;--fg2:#5E5348;--line:#E3D9CF;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#15110E;--fg:#F3EEE9;--fg2:#B5ABA2;--line:#3A312A;--card:#1E1814;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:1200px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.03em;margin:0;font-weight:800;text-wrap:balance}
+.lead{color:var(--fg2);max-width:62ch;margin:10px 0 0}
+.v{margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
+.vh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h2{font-size:26px;letter-spacing:-.02em;margin:0;font-weight:800}
+.tag{font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.v p{color:var(--fg2);margin:6px 0 16px;max-width:64ch}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:12px;align-items:start}
+img{display:block;width:100%;border-radius:12px;border:1px solid var(--line)}
+.end{margin-top:12px;max-height:300px;object-fit:cover;object-position:center}
+.go{display:inline-flex;align-items:center;height:42px;padding:0 18px;margin-top:14px;border-radius:999px;background:#C2410C;color:#fff;font-weight:700;text-decoration:none}
+.go:hover{background:#9F350A}
+:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (max-width:700px){.row{grid-template-columns:minmax(0,1fr)}.ph{max-width:220px}}
+</style></head><body><div class="w">
+<h1>Which background should the FlowBridge home page use?</h1>
+<p class="lead">Six background styles on the real Ember home page. Each row shows the desktop view, the phone view and the closing section. Open the live page to see it move.</p>
+<section class="v" id="bg-1"><div class="vh"><h2>1. Current glow</h2><span class="tag">Current</span></div><p>What you have now: soft orange and amber glows over a dot grid.</p>
+    <div class="row"><img src="shots/bg-1.jpg" alt="Home page with background 1, Current glow" loading="lazy"><img class="ph" src="shots/bg-1-phone.jpg" alt="Phone view, background 1" loading="lazy"></div>
+    <img class="end" src="shots/bg-1-end.jpg" alt="Closing section with background 1" loading="lazy">
+    <a class="go" href="app/bg-1.html">Open live page</a></section>
+<section class="v" id="bg-2"><div class="vh"><h2>2. Fine grid</h2></div><p>Plain charcoal with a faint square grid that fades out, and one soft glow at the top. Calm and technical, like a canvas.</p>
+    <div class="row"><img src="shots/bg-2.jpg" alt="Home page with background 2, Fine grid" loading="lazy"><img class="ph" src="shots/bg-2-phone.jpg" alt="Phone view, background 2" loading="lazy"></div>
+    <img class="end" src="shots/bg-2-end.jpg" alt="Closing section with background 2" loading="lazy">
+    <a class="go" href="app/bg-2.html">Open live page</a></section>
+<section class="v" id="bg-3"><div class="vh"><h2>3. Horizon</h2></div><p>Dark at the top, warming to a low orange horizon behind the demo. One clean light source instead of several glows.</p>
+    <div class="row"><img src="shots/bg-3.jpg" alt="Home page with background 3, Horizon" loading="lazy"><img class="ph" src="shots/bg-3-phone.jpg" alt="Phone view, background 3" loading="lazy"></div>
+    <img class="end" src="shots/bg-3-end.jpg" alt="Closing section with background 3" loading="lazy">
+    <a class="go" href="app/bg-3.html">Open live page</a></section>
+<section class="v" id="bg-4"><div class="vh"><h2>4. Light paper</h2></div><p>A light warm hero with dark text and orange accents. The demo stays dark, so it stands out as the focus.</p>
+    <div class="row"><img src="shots/bg-4.jpg" alt="Home page with background 4, Light paper" loading="lazy"><img class="ph" src="shots/bg-4-phone.jpg" alt="Phone view, background 4" loading="lazy"></div>
+    <img class="end" src="shots/bg-4-end.jpg" alt="Closing section with background 4" loading="lazy">
+    <a class="go" href="app/bg-4.html">Open live page</a></section>
+<section class="v" id="bg-5"><div class="vh"><h2>5. Flow lines</h2></div><p>Charcoal with a few thin orange connection lines and step dots running behind the content. It hints at workflows without shouting.</p>
+    <div class="row"><img src="shots/bg-5.jpg" alt="Home page with background 5, Flow lines" loading="lazy"><img class="ph" src="shots/bg-5-phone.jpg" alt="Phone view, background 5" loading="lazy"></div>
+    <img class="end" src="shots/bg-5-end.jpg" alt="Closing section with background 5" loading="lazy">
+    <a class="go" href="app/bg-5.html">Open live page</a></section>
+<section class="v" id="bg-6"><div class="vh"><h2>6. Grain and spotlight</h2></div><p>Matte charcoal with a fine film grain, and a soft orange light that follows the mouse. Tactile and quiet at rest.</p>
+    <div class="row"><img src="shots/bg-6.jpg" alt="Home page with background 6, Grain and spotlight" loading="lazy"><img class="ph" src="shots/bg-6-phone.jpg" alt="Phone view, background 6" loading="lazy"></div>
+    <img class="end" src="shots/bg-6-end.jpg" alt="Closing section with background 6" loading="lazy">
+    <a class="go" href="app/bg-6.html">Open live page</a></section>
+</div></body></html>
