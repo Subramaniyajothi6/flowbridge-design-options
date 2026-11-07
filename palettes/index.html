@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>FlowBridge Orange Palettes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+<style>
+:root{--pbg:#F5F4F2;--pfg:#1D1B19;--pfg2:#5D5852;--pline:#DFDBD6;--pcard:#FFFFFF}
+@media (prefers-color-scheme:dark){:root{--pbg:#141312;--pfg:#F1EFEC;--pfg2:#ABA59E;--pline:#34312D;--pcard:#1D1B19;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--pbg);color:var(--pfg);font:16px/1.5 Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:1240px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.03em;margin:0;font-weight:800;text-wrap:balance}
+.lead{color:var(--pfg2);max-width:72ch;margin:10px 0 0}
+.opt{margin-top:40px;padding-top:22px;border-top:1px solid var(--pline)}
+.oh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h2{font-size:24px;letter-spacing:-.02em;margin:0;font-weight:800}
+.tag{font-size:12px;font-weight:700;border:1px solid var(--pline);border-radius:999px;padding:2px 10px}
+.idea{color:var(--pfg2);margin:6px 0 16px;max-width:70ch}
+.grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;align-items:start}
+.side{display:flex;flex-direction:column;gap:14px;min-width:0}
+.sw{list-style:none;margin:0;padding:14px;background:var(--pcard);border:1px solid var(--pline);border-radius:14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sw li{display:flex;align-items:center;gap:9px;font-size:13px;min-width:0}
+.sw i{width:28px;height:28px;border-radius:7px;flex:none;border:1px solid rgba(0,0,0,.1)}
+.sw small{display:block;color:var(--pfg2);font-variant-numeric:tabular-nums}
+.cr{width:100%;border-collapse:collapse;background:var(--pcard);border:1px solid var(--pline);border-radius:14px;font-size:13px}
+.cr caption{text-align:left;font-size:12px;color:var(--pfg2);padding:0 0 6px}
+.cr td{padding:7px 12px;border-top:1px solid var(--pline)}
+.num{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
+.pass{color:#15803D}.ok{color:#A16207}.fail{color:#BE123C}
+/* preview */
+.pv{border-radius:16px;overflow:hidden;border:1px solid var(--pline);font-family:Manrope,sans-serif;background:var(--bg)}
+.pv-hero{position:relative;overflow:hidden;background:var(--dark);color:#fff;padding:22px 22px 20px}
+.pv-glow{position:absolute;inset:0;background:radial-gradient(40% 90% at 0% 0%,color-mix(in srgb,var(--brand) 55%,transparent),transparent 70%),radial-gradient(35% 90% at 100% 0%,color-mix(in srgb,var(--brand) 25%,transparent),transparent 70%)}
+.pv-h{position:relative;font-size:24px;line-height:1.08;font-weight:800;letter-spacing:-.04em}
+.pv-h span{color:color-mix(in srgb,var(--brand) 55%,#fff)}
+.pv-row{position:relative;display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.pv-btn{display:inline-flex;align-items:center;height:30px;padding:0 13px;border-radius:999px;background:var(--brand);color:#fff;font-size:12px;font-weight:700;white-space:nowrap}
+.pv-btn.sm{height:28px}
+.pv-btn2{display:inline-flex;align-items:center;height:30px;padding:0 13px;border-radius:999px;border:1px solid rgba(255,255,255,.3);color:#fff;font-size:12px;font-weight:700}
+.pv-app{display:grid;grid-template-columns:140px minmax(0,1fr);min-height:300px}
+.pv-side{background:var(--dark);padding:12px 8px;display:flex;flex-direction:column;gap:3px}
+.pv-logo{display:flex;align-items:center;gap:6px;color:#fff;font-weight:800;font-size:13px;margin:0 4px 8px}
+.pv-logo i{width:16px;height:16px;border-radius:5px;background:var(--brand)}
+.pv-nav{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.72);padding:6px 9px;border-radius:999px}
+.pv-nav b{font-size:10px;background:rgba(255,255,255,.14);color:#fff;border-radius:8px;padding:0 6px}
+.pv-nav.on{background:rgba(255,255,255,.1);color:#fff;box-shadow:inset 3px 0 0 var(--brand)}
+.pv-main{padding:14px;display:flex;flex-direction:column;gap:10px;min-width:0;background:var(--bg)}
+.pv-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;flex-wrap:wrap}
+.pv-t{font-weight:800;font-size:16px;color:var(--ink);letter-spacing:-.02em}
+.pv-s{font-size:12px;color:var(--ink2)}
+.pv-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.pv-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-width:0}
+.pv-l{font-size:11px;color:var(--ink2)}
+.pv-v{font-size:20px;font-weight:800;color:var(--ink);letter-spacing:-.02em}
+.pv-list{padding:4px 12px}
+.pv-li{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:var(--ink);padding:6px 0;border-top:1px solid var(--line)}
+.pv-li:first-child{border-top:0}
+.b{font-style:normal;font-size:11px;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.b.ok{color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,#fff)}
+.b.err{color:var(--err);background:color-mix(in srgb,var(--err) 10%,#fff)}
+.b.warn{color:var(--warn);background:color-mix(in srgb,var(--warn) 12%,#fff)}
+.b.run{color:var(--info);background:color-mix(in srgb,var(--info) 10%,#fff)}
+.pv-chart{display:flex;align-items:flex-end;gap:4px;height:70px;margin-top:6px}
+.pv-chart i{flex:1;border-radius:3px 3px 0 0}
+@media (max-width:860px){.grid{grid-template-columns:minmax(0,1fr)}.pv-app{grid-template-columns:110px minmax(0,1fr)}}
+</style></head><body><div class="w">
+<h1>Colour palettes that suit orange</h1>
+<p class="lead">Six palettes built around an orange brand. Each shows the colours, a small preview of FlowBridge in that palette, and measured contrast. In every one, orange is kept for actions, and success, warning, error and running each have their own colour.</p>
+<section class="opt" id="ember">
+  <div class="oh"><h2>1. Ember (current)</h2><span class="tag">Current</span></div>
+  <p class="idea">Orange with warm sand neutrals and espresso dark. Cosy and consistent, but every neutral is warm, so orange has little to stand out against.</p>
+  <div class="grid"><div><div class="pv" style="--brand:#C2410C;--brandH:#9F350A;--tint:#FCEEE6;--dark:#15110E;--dark2:#221B16;--bg:#FAF6F1;--surface:#FFFFFF;--ink:#1F1A16;--ink2:#5E5348;--line:#E8DED4;--accent:#5B4B3F;--ok:#0A7445;--warn:#8A5206;--err:#BE1E2D;--info:#2563EB">
+  <div class="pv-hero"><div class="pv-glow"></div><div class="pv-h">Automate your <span>invoices</span><br>and see every step.</div><div class="pv-row"><span class="pv-btn">Get started →</span><span class="pv-btn2">Read the docs</span></div></div>
+  <div class="pv-app">
+    <aside class="pv-side"><div class="pv-logo"><i></i>FlowBridge</div><div class="pv-nav on">Overview</div><div class="pv-nav">Workflows</div><div class="pv-nav">Executions <b>3</b></div><div class="pv-nav">Analytics</div></aside>
+    <main class="pv-main">
+      <div class="pv-top"><div><div class="pv-t">Good morning, Priya</div><div class="pv-s">3 failed runs need you.</div></div><span class="pv-btn sm">+ Create workflow</span></div>
+      <div class="pv-cards">
+        <div class="pv-card"><div class="pv-l">Successful runs</div><div class="pv-v">17,912</div></div>
+        <div class="pv-card"><div class="pv-l">Failed runs</div><div class="pv-v">402</div></div>
+      </div>
+      <div class="pv-card pv-list">
+        <div class="pv-li"><span>Invoice paid to ledger</span><em class="b run">Running</em></div>
+        <div class="pv-li"><span>New customer onboarding</span><em class="b err">Failed</em></div>
+        <div class="pv-li"><span>Lead sync</span><em class="b warn">Retrying</em></div>
+        <div class="pv-li"><span>Support triage</span><em class="b ok">Success</em></div>
+      </div>
+      <div class="pv-card"><div class="pv-l">Runs per day</div><div class="pv-chart"><i style="height:62%;background:var(--accent)"></i><i style="height:80%;background:var(--accent)"></i><i style="height:44%;background:var(--accent)"></i><i style="height:90%;background:var(--accent)"></i><i style="height:70%;background:var(--accent)"></i><i style="height:86%;background:var(--accent)"></i><i style="height:58%;background:var(--accent)"></i><i style="height:95%;background:var(--err)"></i><i style="height:74%;background:var(--accent)"></i><i style="height:66%;background:var(--accent)"></i><i style="height:88%;background:var(--accent)"></i><i style="height:52%;background:var(--accent)"></i></div></div>
+    </main>
+  </div></div></div>
+  <div class="side"><ul class="sw"><li><i style="background:#C2410C"></i><span>Orange (actions)<small>#C2410C</small></span></li><li><i style="background:#FCEEE6"></i><span>Orange tint<small>#FCEEE6</small></span></li><li><i style="background:#15110E"></i><span>Dark<small>#15110E</small></span></li><li><i style="background:#FAF6F1"></i><span>Page<small>#FAF6F1</small></span></li><li><i style="background:#1F1A16"></i><span>Text<small>#1F1A16</small></span></li><li><i style="background:#5E5348"></i><span>Muted text<small>#5E5348</small></span></li><li><i style="background:#E8DED4"></i><span>Lines<small>#E8DED4</small></span></li><li><i style="background:#5B4B3F"></i><span>Data and charts<small>#5B4B3F</small></span></li><li><i style="background:#0A7445"></i><span>Success<small>#0A7445</small></span></li><li><i style="background:#8A5206"></i><span>Warning<small>#8A5206</small></span></li><li><i style="background:#BE1E2D"></i><span>Error<small>#BE1E2D</small></span></li><li><i style="background:#2563EB"></i><span>Running<small>#2563EB</small></span></li></ul>
+  <table class="cr"><caption>Contrast (4.5 or more passes for normal text)</caption><tr><td>White on orange button</td><td class="num pass">5.2</td></tr><tr><td>Main text on page</td><td class="num pass">16.0</td></tr><tr><td>Secondary text on page</td><td class="num pass">7.0</td></tr><tr><td>Error text on white</td><td class="num pass">6.2</td></tr><tr><td>Warning text on white</td><td class="num pass">6.4</td></tr></table></div></div></section>
+<section class="opt" id="navy">
+  <div class="oh"><h2>2. Orange and deep navy</h2></div>
+  <p class="idea">Navy is the opposite of orange on the colour wheel, so the orange pops without needing much of it. Cool grey neutrals keep it crisp and professional.</p>
+  <div class="grid"><div><div class="pv" style="--brand:#C94C0A;--brandH:#AB4109;--tint:#FFF1E8;--dark:#0F1B2D;--dark2:#18263B;--bg:#F5F7FA;--surface:#FFFFFF;--ink:#0F1B2D;--ink2:#4B5A70;--line:#DFE4EC;--accent:#2F4A6D;--ok:#0F7B4E;--warn:#9A6700;--err:#C0264B;--info:#2563EB">
+  <div class="pv-hero"><div class="pv-glow"></div><div class="pv-h">Automate your <span>invoices</span><br>and see every step.</div><div class="pv-row"><span class="pv-btn">Get started →</span><span class="pv-btn2">Read the docs</span></div></div>
+  <div class="pv-app">
+    <aside class="pv-side"><div class="pv-logo"><i></i>FlowBridge</div><div class="pv-nav on">Overview</div><div class="pv-nav">Workflows</div><div class="pv-nav">Executions <b>3</b></div><div class="pv-nav">Analytics</div></aside>
+    <main class="pv-main">
+      <div class="pv-top"><div><div class="pv-t">Good morning, Priya</div><div class="pv-s">3 failed runs need you.</div></div><span class="pv-btn sm">+ Create workflow</span></div>
+      <div class="pv-cards">
+        <div class="pv-card"><div class="pv-l">Successful runs</div><div class="pv-v">17,912</div></div>
+        <div class="pv-card"><div class="pv-l">Failed runs</div><div class="pv-v">402</div></div>
+      </div>
+      <div class="pv-card pv-list">
+        <div class="pv-li"><span>Invoice paid to ledger</span><em class="b run">Running</em></div>
+        <div class="pv-li"><span>New customer onboarding</span><em class="b err">Failed</em></div>
+        <div class="pv-li"><span>Lead sync</span><em class="b warn">Retrying</em></div>
+        <div class="pv-li"><span>Support triage</span><em class="b ok">Success</em></div>
+      </div>
+      <div class="pv-card"><div class="pv-l">Runs per day</div><div class="pv-chart"><i style="height:62%;background:var(--accent)"></i><i style="height:80%;background:var(--accent)"></i><i style="height:44%;background:var(--accent)"></i><i style="height:90%;background:var(--accent)"></i><i style="height:70%;background:var(--accent)"></i><i style="height:86%;background:var(--accent)"></i><i style="height:58%;background:var(--accent)"></i><i style="height:95%;background:var(--err)"></i><i style="height:74%;background:var(--accent)"></i><i style="height:66%;background:var(--accent)"></i><i style="height:88%;background:var(--accent)"></i><i style="height:52%;background:var(--accent)"></i></div></div>
+    </main>
+  </div></div></div>
+  <div class="side"><ul class="sw"><li><i style="background:#C94C0A"></i><span>Orange (actions)<small>#C94C0A</small></span></li><li><i style="background:#FFF1E8"></i><span>Orange tint<small>#FFF1E8</small></span></li><li><i style="background:#0F1B2D"></i><span>Dark<small>#0F1B2D</small></span></li><li><i style="background:#F5F7FA"></i><span>Page<small>#F5F7FA</small></span></li><li><i style="background:#0F1B2D"></i><span>Text<small>#0F1B2D</small></span></li><li><i style="background:#4B5A70"></i><span>Muted text<small>#4B5A70</small></span></li><li><i style="background:#DFE4EC"></i><span>Lines<small>#DFE4EC</small></span></li><li><i style="background:#2F4A6D"></i><span>Data and charts<small>#2F4A6D</small></span></li><li><i style="background:#0F7B4E"></i><span>Success<small>#0F7B4E</small></span></li><li><i style="background:#9A6700"></i><span>Warning<small>#9A6700</small></span></li><li><i style="background:#C0264B"></i><span>Error<small>#C0264B</small></span></li><li><i style="background:#2563EB"></i><span>Running<small>#2563EB</small></span></li></ul>
+  <table class="cr"><caption>Contrast (4.5 or more passes for normal text)</caption><tr><td>White on orange button</td><td class="num pass">4.6</td></tr><tr><td>Main text on page</td><td class="num pass">16.1</td></tr><tr><td>Secondary text on page</td><td class="num pass">6.5</td></tr><tr><td>Error text on white</td><td class="num pass">5.8</td></tr><tr><td>Warning text on white</td><td class="num pass">4.9</td></tr></table></div></div></section>
+<section class="opt" id="teal">
+  <div class="oh"><h2>3. Orange and teal</h2></div>
+  <p class="idea">Teal is a calm second colour for data, charts and running states, while orange stays for actions. Fresh, and clearly separated from red errors.</p>
+  <div class="grid"><div><div class="pv" style="--brand:#C94D0D;--brandH:#AB410B;--tint:#FDEFE6;--dark:#10201F;--dark2:#18302E;--bg:#F6F7F6;--surface:#FFFFFF;--ink:#14201F;--ink2:#4E5C5A;--line:#DDE3E1;--accent:#0F766E;--ok:#15803D;--warn:#A16207;--err:#BE123C;--info:#0F766E">
+  <div class="pv-hero"><div class="pv-glow"></div><div class="pv-h">Automate your <span>invoices</span><br>and see every step.</div><div class="pv-row"><span class="pv-btn">Get started →</span><span class="pv-btn2">Read the docs</span></div></div>
+  <div class="pv-app">
+    <aside class="pv-side"><div class="pv-logo"><i></i>FlowBridge</div><div class="pv-nav on">Overview</div><div class="pv-nav">Workflows</div><div class="pv-nav">Executions <b>3</b></div><div class="pv-nav">Analytics</div></aside>
+    <main class="pv-main">
+      <div class="pv-top"><div><div class="pv-t">Good morning, Priya</div><div class="pv-s">3 failed runs need you.</div></div><span class="pv-btn sm">+ Create workflow</span></div>
+      <div class="pv-cards">
+        <div class="pv-card"><div class="pv-l">Successful runs</div><div class="pv-v">17,912</div></div>
+        <div class="pv-card"><div class="pv-l">Failed runs</div><div class="pv-v">402</div></div>
+      </div>
+      <div class="pv-card pv-list">
+        <div class="pv-li"><span>Invoice paid to ledger</span><em class="b run">Running</em></div>
+        <div class="pv-li"><span>New customer onboarding</span><em class="b err">Failed</em></div>
+        <div class="pv-li"><span>Lead sync</span><em class="b warn">Retrying</em></div>
+        <div class="pv-li"><span>Support triage</span><em class="b ok">Success</em></div>
+      </div>
+      <div class="pv-card"><div class="pv-l">Runs per day</div><div class="pv-chart"><i style="height:62%;background:var(--accent)"></i><i style="height:80%;background:var(--accent)"></i><i style="height:44%;background:var(--accent)"></i><i style="height:90%;background:var(--accent)"></i><i style="height:70%;background:var(--accent)"></i><i style="height:86%;background:var(--accent)"></i><i style="height:58%;background:var(--accent)"></i><i style="height:95%;background:var(--err)"></i><i style="height:74%;background:var(--accent)"></i><i style="height:66%;background:var(--accent)"></i><i style="height:88%;background:var(--accent)"></i><i style="height:52%;background:var(--accent)"></i></div></div>
+    </main>
+  </div></div></div>
+  <div class="side"><ul class="sw"><li><i style="background:#C94D0D"></i><span>Orange (actions)<small>#C94D0D</small></span></li><li><i style="background:#FDEFE6"></i><span>Orange tint<small>#FDEFE6</small></span></li><li><i style="background:#10201F"></i><span>Dark<small>#10201F</small></span></li><li><i style="background:#F6F7F6"></i><span>Page<small>#F6F7F6</small></span></li><li><i style="background:#14201F"></i><span>Text<small>#14201F</small></span></li><li><i style="background:#4E5C5A"></i><span>Muted text<small>#4E5C5A</small></span></li><li><i style="background:#DDE3E1"></i><span>Lines<small>#DDE3E1</small></span></li><li><i style="background:#0F766E"></i><span>Data and charts<small>#0F766E</small></span></li><li><i style="background:#15803D"></i><span>Success<small>#15803D</small></span></li><li><i style="background:#A16207"></i><span>Warning<small>#A16207</small></span></li><li><i style="background:#BE123C"></i><span>Error<small>#BE123C</small></span></li><li><i style="background:#0F766E"></i><span>Running<small>#0F766E</small></span></li></ul>
+  <table class="cr"><caption>Contrast (4.5 or more passes for normal text)</caption><tr><td>White on orange button</td><td class="num pass">4.6</td></tr><tr><td>Main text on page</td><td class="num pass">15.6</td></tr><tr><td>Secondary text on page</td><td class="num pass">6.5</td></tr><tr><td>Error text on white</td><td class="num pass">6.3</td></tr><tr><td>Warning text on white</td><td class="num pass">4.9</td></tr></table></div></div></section>
+<section class="opt" id="graphite">
+  <div class="oh"><h2>4. Orange and graphite</h2></div>
+  <p class="idea">True neutral greys with no warm tint, like a professional tool. Orange is the only colour, so it reads instantly as the action.</p>
+  <div class="grid"><div><div class="pv" style="--brand:#C94C0A;--brandH:#AB4109;--tint:#FFF1E8;--dark:#18181B;--dark2:#27272A;--bg:#FAFAFA;--surface:#FFFFFF;--ink:#18181B;--ink2:#52525B;--line:#E4E4E7;--accent:#3F3F46;--ok:#15803D;--warn:#A16207;--err:#BE123C;--info:#2563EB">
+  <div class="pv-hero"><div class="pv-glow"></div><div class="pv-h">Automate your <span>invoices</span><br>and see every step.</div><div class="pv-row"><span class="pv-btn">Get started →</span><span class="pv-btn2">Read the docs</span></div></div>
+  <div class="pv-app">
+    <aside class="pv-side"><div class="pv-logo"><i></i>FlowBridge</div><div class="pv-nav on">Overview</div><div class="pv-nav">Workflows</div><div class="pv-nav">Executions <b>3</b></div><div class="pv-nav">Analytics</div></aside>
+    <main class="pv-main">
+      <div class="pv-top"><div><div class="pv-t">Good morning, Priya</div><div class="pv-s">3 failed runs need you.</div></div><span class="pv-btn sm">+ Create workflow</span></div>
+      <div class="pv-cards">
+        <div class="pv-card"><div class="pv-l">Successful runs</div><div class="pv-v">17,912</div></div>
+        <div class="pv-card"><div class="pv-l">Failed runs</div><div class="pv-v">402</div></div>
+      </div>
+      <div class="pv-card pv-list">
+        <div class="pv-li"><span>Invoice paid to ledger</span><em class="b run">Running</em></div>
+        <div class="pv-li"><span>New customer onboarding</span><em class="b err">Failed</em></div>
+        <div class="pv-li"><span>Lead sync</span><em class="b warn">Retrying</em></div>
+        <div class="pv-li"><span>Support triage</span><em class="b ok">Success</em></div>
+      </div>
+      <div class="pv-card"><div class="pv-l">Runs per day</div><div class="pv-chart"><i style="height:62%;background:var(--accent)"></i><i style="height:80%;background:var(--accent)"></i><i style="height:44%;background:var(--accent)"></i><i style="height:90%;background:var(--accent)"></i><i style="height:70%;background:var(--accent)"></i><i style="height:86%;background:var(--accent)"></i><i style="height:58%;background:var(--accent)"></i><i style="height:95%;background:var(--err)"></i><i style="height:74%;background:var(--accent)"></i><i style="height:66%;background:var(--accent)"></i><i style="height:88%;background:var(--accent)"></i><i style="height:52%;background:var(--accent)"></i></div></div>
+    </main>
+  </div></div></div>
+  <div class="side"><ul class="sw"><li><i style="background:#C94C0A"></i><span>Orange (actions)<small>#C94C0A</small></span></li><li><i style="background:#FFF1E8"></i><span>Orange tint<small>#FFF1E8</small></span></li><li><i style="background:#18181B"></i><span>Dark<small>#18181B</small></span></li><li><i style="background:#FAFAFA"></i><span>Page<small>#FAFAFA</small></span></li><li><i style="background:#18181B"></i><span>Text<small>#18181B</small></span></li><li><i style="background:#52525B"></i><span>Muted text<small>#52525B</small></span></li><li><i style="background:#E4E4E7"></i><span>Lines<small>#E4E4E7</small></span></li><li><i style="background:#3F3F46"></i><span>Data and charts<small>#3F3F46</small></span></li><li><i style="background:#15803D"></i><span>Success<small>#15803D</small></span></li><li><i style="background:#A16207"></i><span>Warning<small>#A16207</small></span></li><li><i style="background:#BE123C"></i><span>Error<small>#BE123C</small></span></li><li><i style="background:#2563EB"></i><span>Running<small>#2563EB</small></span></li></ul>
+  <table class="cr"><caption>Contrast (4.5 or more passes for normal text)</caption><tr><td>White on orange button</td><td class="num pass">4.6</td></tr><tr><td>Main text on page</td><td class="num pass">17.0</td></tr><tr><td>Secondary text on page</td><td class="num pass">7.4</td></tr><tr><td>Error text on white</td><td class="num pass">6.3</td></tr><tr><td>Warning text on white</td><td class="num pass">4.9</td></tr></table></div></div></section>
+<section class="opt" id="plum">
+  <div class="oh"><h2>5. Orange and aubergine</h2></div>
+  <p class="idea">A deep plum dark with orange gives a rich, premium feel. Neutrals lean slightly cool so the warmth sits in the accents.</p>
+  <div class="grid"><div><div class="pv" style="--brand:#C84D0A;--brandH:#AA4109;--tint:#FDF0E7;--dark:#221726;--dark2:#2F2133;--bg:#F8F6F8;--surface:#FFFFFF;--ink:#221726;--ink2:#5B4E5F;--line:#E5DFE6;--accent:#6D4C7D;--ok:#15803D;--warn:#9A6700;--err:#BE123C;--info:#2563EB">
+  <div class="pv-hero"><div class="pv-glow"></div><div class="pv-h">Automate your <span>invoices</span><br>and see every step.</div><div class="pv-row"><span class="pv-btn">Get started →</span><span class="pv-btn2">Read the docs</span></div></div>
+  <div class="pv-app">
+    <aside class="pv-side"><div class="pv-logo"><i></i>FlowBridge</div><div class="pv-nav on">Overview</div><div class="pv-nav">Workflows</div><div class="pv-nav">Executions <b>3</b></div><div class="pv-nav">Analytics</div></aside>
+    <main class="pv-main">
+      <div class="pv-top"><div><div class="pv-t">Good morning, Priya</div><div class="pv-s">3 failed runs need you.</div></div><span class="pv-btn sm">+ Create workflow</span></div>
+      <div class="pv-cards">
+        <div class="pv-card"><div class="pv-l">Successful runs</div><div class="pv-v">17,912</div></div>
+        <div class="pv-card"><div class="pv-l">Failed runs</div><div class="pv-v">402</div></div>
+      </div>
+      <div class="pv-card pv-list">
+        <div class="pv-li"><span>Invoice paid to ledger</span><em class="b run">Running</em></div>
+        <div class="pv-li"><span>New customer onboarding</span><em class="b err">Failed</em></div>
+        <div class="pv-li"><span>Lead sync</span><em class="b warn">Retrying</em></div>
+        <div class="pv-li"><span>Support triage</span><em class="b ok">Success</em></div>
+      </div>
+      <div class="pv-card"><div class="pv-l">Runs per day</div><div class="pv-chart"><i style="height:62%;background:var(--accent)"></i><i style="height:80%;background:var(--accent)"></i><i style="height:44%;background:var(--accent)"></i><i style="height:90%;background:var(--accent)"></i><i style="height:70%;background:var(--accent)"></i><i style="height:86%;background:var(--accent)"></i><i style="height:58%;background:var(--accent)"></i><i style="height:95%;background:var(--err)"></i><i style="height:74%;background:var(--accent)"></i><i style="height:66%;background:var(--accent)"></i><i style="height:88%;background:var(--accent)"></i><i style="height:52%;background:var(--accent)"></i></div></div>
+    </main>
+  </div></div></div>
+  <div class="side"><ul class="sw"><li><i style="background:#C84D0A"></i><span>Orange (actions)<small>#C84D0A</small></span></li><li><i style="background:#FDF0E7"></i><span>Orange tint<small>#FDF0E7</small></span></li><li><i style="background:#221726"></i><span>Dark<small>#221726</small></span></li><li><i style="background:#F8F6F8"></i><span>Page<small>#F8F6F8</small></span></li><li><i style="background:#221726"></i><span>Text<small>#221726</small></span></li><li><i style="background:#5B4E5F"></i><span>Muted text<small>#5B4E5F</small></span></li><li><i style="background:#E5DFE6"></i><span>Lines<small>#E5DFE6</small></span></li><li><i style="background:#6D4C7D"></i><span>Data and charts<small>#6D4C7D</small></span></li><li><i style="background:#15803D"></i><span>Success<small>#15803D</small></span></li><li><i style="background:#9A6700"></i><span>Warning<small>#9A6700</small></span></li><li><i style="background:#BE123C"></i><span>Error<small>#BE123C</small></span></li><li><i style="background:#2563EB"></i><span>Running<small>#2563EB</small></span></li></ul>
+  <table class="cr"><caption>Contrast (4.5 or more passes for normal text)</caption><tr><td>White on orange button</td><td class="num pass">4.6</td></tr><tr><td>Main text on page</td><td class="num pass">16.0</td></tr><tr><td>Secondary text on page</td><td class="num pass">7.2</td></tr><tr><td>Error text on white</td><td class="num pass">6.3</td></tr><tr><td>Warning text on white</td><td class="num pass">4.9</td></tr></table></div></div></section>
+<section class="opt" id="forest">
+  <div class="oh"><h2>6. Orange and forest</h2></div>
+  <p class="idea">Deep forest green dark with orange feels natural and grounded. Success green is lighter so the two greens never get mixed up.</p>
+  <div class="grid"><div><div class="pv" style="--brand:#C1540D;--brandH:#A4470B;--tint:#FDF0E6;--dark:#13251E;--dark2:#1C342A;--bg:#F6F7F4;--surface:#FFFFFF;--ink:#13251E;--ink2:#4D5C55;--line:#DEE3DD;--accent:#2F5D4A;--ok:#16A34A;--warn:#A16207;--err:#BE123C;--info:#2563EB">
+  <div class="pv-hero"><div class="pv-glow"></div><div class="pv-h">Automate your <span>invoices</span><br>and see every step.</div><div class="pv-row"><span class="pv-btn">Get started →</span><span class="pv-btn2">Read the docs</span></div></div>
+  <div class="pv-app">
+    <aside class="pv-side"><div class="pv-logo"><i></i>FlowBridge</div><div class="pv-nav on">Overview</div><div class="pv-nav">Workflows</div><div class="pv-nav">Executions <b>3</b></div><div class="pv-nav">Analytics</div></aside>
+    <main class="pv-main">
+      <div class="pv-top"><div><div class="pv-t">Good morning, Priya</div><div class="pv-s">3 failed runs need you.</div></div><span class="pv-btn sm">+ Create workflow</span></div>
+      <div class="pv-cards">
+        <div class="pv-card"><div class="pv-l">Successful runs</div><div class="pv-v">17,912</div></div>
+        <div class="pv-card"><div class="pv-l">Failed runs</div><div class="pv-v">402</div></div>
+      </div>
+      <div class="pv-card pv-list">
+        <div class="pv-li"><span>Invoice paid to ledger</span><em class="b run">Running</em></div>
+        <div class="pv-li"><span>New customer onboarding</span><em class="b err">Failed</em></div>
+        <div class="pv-li"><span>Lead sync</span><em class="b warn">Retrying</em></div>
+        <div class="pv-li"><span>Support triage</span><em class="b ok">Success</em></div>
+      </div>
+      <div class="pv-card"><div class="pv-l">Runs per day</div><div class="pv-chart"><i style="height:62%;background:var(--accent)"></i><i style="height:80%;background:var(--accent)"></i><i style="height:44%;background:var(--accent)"></i><i style="height:90%;background:var(--accent)"></i><i style="height:70%;background:var(--accent)"></i><i style="height:86%;background:var(--accent)"></i><i style="height:58%;background:var(--accent)"></i><i style="height:95%;background:var(--err)"></i><i style="height:74%;background:var(--accent)"></i><i style="height:66%;background:var(--accent)"></i><i style="height:88%;background:var(--accent)"></i><i style="height:52%;background:var(--accent)"></i></div></div>
+    </main>
+  </div></div></div>
+  <div class="side"><ul class="sw"><li><i style="background:#C1540D"></i><span>Orange (actions)<small>#C1540D</small></span></li><li><i style="background:#FDF0E6"></i><span>Orange tint<small>#FDF0E6</small></span></li><li><i style="background:#13251E"></i><span>Dark<small>#13251E</small></span></li><li><i style="background:#F6F7F4"></i><span>Page<small>#F6F7F4</small></span></li><li><i style="background:#13251E"></i><span>Text<small>#13251E</small></span></li><li><i style="background:#4D5C55"></i><span>Muted text<small>#4D5C55</small></span></li><li><i style="background:#DEE3DD"></i><span>Lines<small>#DEE3DD</small></span></li><li><i style="background:#2F5D4A"></i><span>Data and charts<small>#2F5D4A</small></span></li><li><i style="background:#16A34A"></i><span>Success<small>#16A34A</small></span></li><li><i style="background:#A16207"></i><span>Warning<small>#A16207</small></span></li><li><i style="background:#BE123C"></i><span>Error<small>#BE123C</small></span></li><li><i style="background:#2563EB"></i><span>Running<small>#2563EB</small></span></li></ul>
+  <table class="cr"><caption>Contrast (4.5 or more passes for normal text)</caption><tr><td>White on orange button</td><td class="num pass">4.6</td></tr><tr><td>Main text on page</td><td class="num pass">14.9</td></tr><tr><td>Secondary text on page</td><td class="num pass">6.6</td></tr><tr><td>Error text on white</td><td class="num pass">6.3</td></tr><tr><td>Warning text on white</td><td class="num pass">4.9</td></tr></table></div></div></section>
+</div></body></html>
