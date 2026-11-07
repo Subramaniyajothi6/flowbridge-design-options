@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>FlowBridge Sidebar Gradients</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F7F3EE;--fg:#1F1A16;--fg2:#5E5348;--line:#E3D9CF}
+@media (prefers-color-scheme:dark){:root{--bg:#15110E;--fg:#F3EEE9;--fg2:#B5ABA2;--line:#3A312A;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:1200px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.03em;margin:0;font-weight:800;text-wrap:balance}
+.lead{color:var(--fg2);max-width:64ch;margin:10px 0 0}
+.v{margin-top:40px;padding-top:22px;border-top:1px solid var(--line)}
+.vh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h2{font-size:24px;letter-spacing:-.02em;margin:0;font-weight:800}
+.tag{font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.v p{color:var(--fg2);margin:6px 0 14px;max-width:66ch}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+figure{margin:0}
+img{display:block;width:100%;border-radius:10px;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--fg2);margin-top:4px}
+.go{display:inline-flex;align-items:center;height:40px;padding:0 18px;margin-top:14px;border-radius:999px;background:#C2410C;color:#fff;font-weight:700;text-decoration:none}
+.go:hover{background:#9F350A}
+:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (max-width:700px){.grid{grid-template-columns:minmax(0,1fr)}}
+</style></head><body><div class="w">
+<h1>Which gradient sidebar should the app use?</h1>
+<p class="lead">Six gradient styles for the sidebar on the pages people work in. The rest of each page stays as it is. Select a screen to open it live and click around.</p>
+<section class="v" id="v1"><div class="vh"><h2>1. Ember fade</h2></div><p>Charcoal at the top fading into deep rust at the bottom. Quiet, with warmth that builds as you go down.</p>
+    <div class="grid"><figure><a href="v1/overview.html"><img src="shots/v1-overview.jpg" alt="Overview in option 1, Ember fade" loading="lazy"></a><figcaption>Overview</figcaption></figure><figure><a href="v1/workflows.html"><img src="shots/v1-workflows.jpg" alt="Workflows in option 1, Ember fade" loading="lazy"></a><figcaption>Workflows</figcaption></figure></div>
+    <a class="go" href="v1/overview.html">Open live pages</a></section>
+<section class="v" id="v2"><div class="vh"><h2>2. Top glow</h2></div><p>A dark sidebar with an orange glow behind the logo, the same light as the home page.</p>
+    <div class="grid"><figure><a href="v2/overview.html"><img src="shots/v2-overview.jpg" alt="Overview in option 2, Top glow" loading="lazy"></a><figcaption>Overview</figcaption></figure><figure><a href="v2/workflows.html"><img src="shots/v2-workflows.jpg" alt="Workflows in option 2, Top glow" loading="lazy"></a><figcaption>Workflows</figcaption></figure></div>
+    <a class="go" href="v2/overview.html">Open live pages</a></section>
+<section class="v" id="v3"><div class="vh"><h2>3. Full orange</h2></div><p>Bright orange at the top deepening to rust at the bottom, with white text. The boldest sidebar.</p>
+    <div class="grid"><figure><a href="v3/overview.html"><img src="shots/v3-overview.jpg" alt="Overview in option 3, Full orange" loading="lazy"></a><figcaption>Overview</figcaption></figure><figure><a href="v3/workflows.html"><img src="shots/v3-workflows.jpg" alt="Workflows in option 3, Full orange" loading="lazy"></a><figcaption>Workflows</figcaption></figure></div>
+    <a class="go" href="v3/overview.html">Open live pages</a></section>
+<section class="v" id="v4"><div class="vh"><h2>4. Warm corners</h2></div><p>Charcoal with orange light rising from the bottom left and amber at the top right, like the home page glows.</p>
+    <div class="grid"><figure><a href="v4/overview.html"><img src="shots/v4-overview.jpg" alt="Overview in option 4, Warm corners" loading="lazy"></a><figcaption>Overview</figcaption></figure><figure><a href="v4/workflows.html"><img src="shots/v4-workflows.jpg" alt="Workflows in option 4, Warm corners" loading="lazy"></a><figcaption>Workflows</figcaption></figure></div>
+    <a class="go" href="v4/overview.html">Open live pages</a></section>
+<section class="v" id="v5"><div class="vh"><h2>5. Rust to plum</h2></div><p>A rich blend from deep rust at the top to a dark plum-brown at the bottom. Warm but calm.</p>
+    <div class="grid"><figure><a href="v5/overview.html"><img src="shots/v5-overview.jpg" alt="Overview in option 5, Rust to plum" loading="lazy"></a><figcaption>Overview</figcaption></figure><figure><a href="v5/workflows.html"><img src="shots/v5-workflows.jpg" alt="Workflows in option 5, Rust to plum" loading="lazy"></a><figcaption>Workflows</figcaption></figure></div>
+    <a class="go" href="v5/overview.html">Open live pages</a></section>
+<section class="v" id="v6"><div class="vh"><h2>6. Light peach</h2></div><p>A light sidebar fading from warm cream to soft peach, with dark text and an orange active item.</p>
+    <div class="grid"><figure><a href="v6/overview.html"><img src="shots/v6-overview.jpg" alt="Overview in option 6, Light peach" loading="lazy"></a><figcaption>Overview</figcaption></figure><figure><a href="v6/workflows.html"><img src="shots/v6-workflows.jpg" alt="Workflows in option 6, Light peach" loading="lazy"></a><figcaption>Workflows</figcaption></figure></div>
+    <a class="go" href="v6/overview.html">Open live pages</a></section>
+</div></body></html>
