@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>FlowBridge Colour Options</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F7F3EE;--fg:#1F1A16;--fg2:#5E5348;--line:#E3D9CF;--chip:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#15110E;--fg:#F3EEE9;--fg2:#B5ABA2;--line:#3A312A;--chip:#221B16;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:1200px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.03em;margin:0;font-weight:800;text-wrap:balance}
+.lead{color:var(--fg2);max-width:64ch;margin:10px 0 0}
+.v{margin-top:44px;padding-top:24px;border-top:1px solid var(--line)}
+.vh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h2{font-size:26px;letter-spacing:-.02em;margin:0;font-weight:800}
+.tag{font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.v p{color:var(--fg2);margin:6px 0 0;max-width:66ch}
+.v p.map{font-size:13px;font-weight:600;color:var(--fg);margin:8px 0 16px}
+.grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px;align-items:start}
+.long{height:620px;overflow-y:auto;border:1px solid var(--line);border-radius:12px}
+.long img{display:block;width:100%}
+.side{display:flex;flex-direction:column;gap:10px;min-width:0}
+figure{margin:0}
+figure img{display:block;width:100%;border-radius:10px;border:1px solid var(--line)}
+figcaption{font-size:13px;color:var(--fg2);margin-top:4px}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.go,.go2{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:999px;font-weight:700;text-decoration:none;font-size:14px}
+.go{background:#C2410C;color:#fff}.go:hover{background:#9F350A}
+.go2{background:var(--chip);color:var(--fg);border:1px solid var(--line)}
+:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (max-width:820px){.grid{grid-template-columns:minmax(0,1fr)}.long{height:480px}}
+</style></head><body><div class="w">
+<h1>How should colour be spread across FlowBridge?</h1>
+<p class="lead">Five ways to distribute dark, light and orange across the home page, carried through to Sign in, Create workspace and Docs. Scroll inside each home page preview to see the whole page, or open it live.</p>
+<section class="v" id="v1"><div class="vh"><h2>1. Current</h2><span class="tag">Current</span></div>
+    <p>Dark top, then light sections with one dark band for failures, and a dark closing section.</p><p class="map">Home sections, top to bottom: Dark · light · light · dark · light · dark</p>
+    <div class="grid"><div class="long" tabindex="0" aria-label="Full home page, option 1. Scroll inside to see all of it."><img src="shots/v1-home.jpg" alt="Full home page in option 1, Current" loading="lazy"></div>
+    <div class="side"><figure><img src="shots/v1-sign-in.jpg" alt="Sign in page in option 1" loading="lazy"><figcaption>Sign in</figcaption></figure><figure><img src="shots/v1-register.jpg" alt="Create workspace page in option 1" loading="lazy"><figcaption>Create workspace</figcaption></figure><figure><img src="shots/v1-docs.jpg" alt="Docs page in option 1" loading="lazy"><figcaption>Docs</figcaption></figure></div></div>
+    <div class="acts"><a class="go" href="v1/index.html">Open live home page</a><a class="go2" href="v1/sign-in.html">Sign in</a><a class="go2" href="v1/register.html">Create workspace</a><a class="go2" href="v1/docs.html">Docs</a></div></section>
+<section class="v" id="v2"><div class="vh"><h2>2. Dark throughout</h2></div>
+    <p>Every section is dark charcoal, in two alternating shades, with orange used only for accents. Closest to the n8n feel, and the most consistent.</p><p class="map">Home sections, top to bottom: Dark · dark · dark · dark · dark · dark</p>
+    <div class="grid"><div class="long" tabindex="0" aria-label="Full home page, option 2. Scroll inside to see all of it."><img src="shots/v2-home.jpg" alt="Full home page in option 2, Dark throughout" loading="lazy"></div>
+    <div class="side"><figure><img src="shots/v2-sign-in.jpg" alt="Sign in page in option 2" loading="lazy"><figcaption>Sign in</figcaption></figure><figure><img src="shots/v2-register.jpg" alt="Create workspace page in option 2" loading="lazy"><figcaption>Create workspace</figcaption></figure><figure><img src="shots/v2-docs.jpg" alt="Docs page in option 2" loading="lazy"><figcaption>Docs</figcaption></figure></div></div>
+    <div class="acts"><a class="go" href="v2/index.html">Open live home page</a><a class="go2" href="v2/sign-in.html">Sign in</a><a class="go2" href="v2/register.html">Create workspace</a><a class="go2" href="v2/docs.html">Docs</a></div></section>
+<section class="v" id="v3"><div class="vh"><h2>3. Light first</h2></div>
+    <p>A light, warm top section with the dark demo as the focus. Everything stays light except the failures band and the closing section.</p><p class="map">Home sections, top to bottom: Light · light · light · dark · light · dark</p>
+    <div class="grid"><div class="long" tabindex="0" aria-label="Full home page, option 3. Scroll inside to see all of it."><img src="shots/v3-home.jpg" alt="Full home page in option 3, Light first" loading="lazy"></div>
+    <div class="side"><figure><img src="shots/v3-sign-in.jpg" alt="Sign in page in option 3" loading="lazy"><figcaption>Sign in</figcaption></figure><figure><img src="shots/v3-register.jpg" alt="Create workspace page in option 3" loading="lazy"><figcaption>Create workspace</figcaption></figure><figure><img src="shots/v3-docs.jpg" alt="Docs page in option 3" loading="lazy"><figcaption>Docs</figcaption></figure></div></div>
+    <div class="acts"><a class="go" href="v3/index.html">Open live home page</a><a class="go2" href="v3/sign-in.html">Sign in</a><a class="go2" href="v3/register.html">Create workspace</a><a class="go2" href="v3/docs.html">Docs</a></div></section>
+<section class="v" id="v4"><div class="vh"><h2>4. Warm rhythm</h2></div>
+    <p>A dark top with a low orange horizon, then light sections that alternate between paper and warm sand, and a deep rust band for failures.</p><p class="map">Home sections, top to bottom: Dark · paper · sand · rust · paper · dark</p>
+    <div class="grid"><div class="long" tabindex="0" aria-label="Full home page, option 4. Scroll inside to see all of it."><img src="shots/v4-home.jpg" alt="Full home page in option 4, Warm rhythm" loading="lazy"></div>
+    <div class="side"><figure><img src="shots/v4-sign-in.jpg" alt="Sign in page in option 4" loading="lazy"><figcaption>Sign in</figcaption></figure><figure><img src="shots/v4-register.jpg" alt="Create workspace page in option 4" loading="lazy"><figcaption>Create workspace</figcaption></figure><figure><img src="shots/v4-docs.jpg" alt="Docs page in option 4" loading="lazy"><figcaption>Docs</figcaption></figure></div></div>
+    <div class="acts"><a class="go" href="v4/index.html">Open live home page</a><a class="go2" href="v4/sign-in.html">Sign in</a><a class="go2" href="v4/register.html">Create workspace</a><a class="go2" href="v4/docs.html">Docs</a></div></section>
+<section class="v" id="v5"><div class="vh"><h2>5. Orange closer</h2></div>
+    <p>Like the current layout, but cleaner glows and a bold orange closing section, so the final call to action stands out.</p><p class="map">Home sections, top to bottom: Dark · light · light · dark · light · orange</p>
+    <div class="grid"><div class="long" tabindex="0" aria-label="Full home page, option 5. Scroll inside to see all of it."><img src="shots/v5-home.jpg" alt="Full home page in option 5, Orange closer" loading="lazy"></div>
+    <div class="side"><figure><img src="shots/v5-sign-in.jpg" alt="Sign in page in option 5" loading="lazy"><figcaption>Sign in</figcaption></figure><figure><img src="shots/v5-register.jpg" alt="Create workspace page in option 5" loading="lazy"><figcaption>Create workspace</figcaption></figure><figure><img src="shots/v5-docs.jpg" alt="Docs page in option 5" loading="lazy"><figcaption>Docs</figcaption></figure></div></div>
+    <div class="acts"><a class="go" href="v5/index.html">Open live home page</a><a class="go2" href="v5/sign-in.html">Sign in</a><a class="go2" href="v5/register.html">Create workspace</a><a class="go2" href="v5/docs.html">Docs</a></div></section>
+</div></body></html>
