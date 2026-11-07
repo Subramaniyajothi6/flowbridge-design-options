@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>FlowBridge Graphite Comparison</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F4F4F5;--fg:#18181B;--fg2:#52525B;--line:#E4E4E7}
+@media (prefers-color-scheme:dark){:root{--bg:#18181B;--fg:#FAFAFA;--fg2:#A1A1AA;--line:#3F3F46;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:1400px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.03em;margin:0;font-weight:800;text-wrap:balance}
+.lead{color:var(--fg2);max-width:76ch;margin:10px 0 0}
+.v{margin-top:34px;padding-top:18px;border-top:1px solid var(--line)}
+h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px;font-weight:800}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+figure{margin:0}
+img{display:block;width:100%;border-radius:10px;border:1px solid var(--line)}
+figcaption{font-size:13px;font-weight:700;color:var(--fg2);margin-top:5px}
+figcaption.aft{color:#C94C0A}
+:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (max-width:760px){.pair{grid-template-columns:minmax(0,1fr)}}
+</style></head><body><div class="w">
+<h1>Current Ember versus orange and graphite</h1>
+<p class="lead">The same pages, with the warm browns and creams replaced by neutral graphite greys. Orange stays for actions, and success, warning, error and running keep their own colours. Fonts, layout and wording do not change. Select a screen to open it live.</p>
+<section class="v" id="index"><h2>Home, top</h2>
+    <div class="pair"><figure><a href="before/index.html"><img src="shots/index-before.jpg" alt="Home, top, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/index.html"><img src="shots/index-after.jpg" alt="Home, top, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="index2"><h2>Home, use cases</h2>
+    <div class="pair"><figure><a href="before/index.html"><img src="shots/index2-before.jpg" alt="Home, use cases, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/index.html"><img src="shots/index2-after.jpg" alt="Home, use cases, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="overview"><h2>Overview</h2>
+    <div class="pair"><figure><a href="before/overview.html"><img src="shots/overview-before.jpg" alt="Overview, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/overview.html"><img src="shots/overview-after.jpg" alt="Overview, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="workflows"><h2>Workflows</h2>
+    <div class="pair"><figure><a href="before/workflows.html"><img src="shots/workflows-before.jpg" alt="Workflows, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/workflows.html"><img src="shots/workflows-after.jpg" alt="Workflows, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="builder"><h2>Workflow builder</h2>
+    <div class="pair"><figure><a href="before/builder.html"><img src="shots/builder-before.jpg" alt="Workflow builder, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/builder.html"><img src="shots/builder-after.jpg" alt="Workflow builder, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="executions"><h2>Executions</h2>
+    <div class="pair"><figure><a href="before/executions.html"><img src="shots/executions-before.jpg" alt="Executions, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/executions.html"><img src="shots/executions-after.jpg" alt="Executions, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="execution-details"><h2>Execution details</h2>
+    <div class="pair"><figure><a href="before/execution-details.html"><img src="shots/execution-details-before.jpg" alt="Execution details, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/execution-details.html"><img src="shots/execution-details-after.jpg" alt="Execution details, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="integrations"><h2>Integrations</h2>
+    <div class="pair"><figure><a href="before/integrations.html"><img src="shots/integrations-before.jpg" alt="Integrations, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/integrations.html"><img src="shots/integrations-after.jpg" alt="Integrations, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="analytics"><h2>Analytics</h2>
+    <div class="pair"><figure><a href="before/analytics.html"><img src="shots/analytics-before.jpg" alt="Analytics, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/analytics.html"><img src="shots/analytics-after.jpg" alt="Analytics, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="settings"><h2>Settings</h2>
+    <div class="pair"><figure><a href="before/settings.html"><img src="shots/settings-before.jpg" alt="Settings, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/settings.html"><img src="shots/settings-after.jpg" alt="Settings, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="sign-in"><h2>Sign in</h2>
+    <div class="pair"><figure><a href="before/sign-in.html"><img src="shots/sign-in-before.jpg" alt="Sign in, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/sign-in.html"><img src="shots/sign-in-after.jpg" alt="Sign in, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+<section class="v" id="docs"><h2>Docs</h2>
+    <div class="pair"><figure><a href="before/docs.html"><img src="shots/docs-before.jpg" alt="Docs, current" loading="lazy"></a><figcaption>Current (Ember)</figcaption></figure>
+    <figure><a href="after/docs.html"><img src="shots/docs-after.jpg" alt="Docs, graphite" loading="lazy"></a><figcaption class="aft">Orange and graphite</figcaption></figure></div></section>
+</div></body></html>
