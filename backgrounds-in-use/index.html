@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>FlowBridge Backgrounds in Use</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F4F4F5;--fg:#18181B;--fg2:#52525B;--line:#E4E4E7}
+@media (prefers-color-scheme:dark){:root{--bg:#18181B;--fg:#FAFAFA;--fg2:#A1A1AA;--line:#3F3F46;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:1400px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.03em;margin:0;font-weight:800;text-wrap:balance}
+.lead{color:var(--fg2);max-width:76ch;margin:10px 0 0}
+.v{margin-top:34px;padding-top:18px;border-top:1px solid var(--line)}
+.vh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+h2{font-size:22px;letter-spacing:-.02em;margin:0;font-weight:800}
+.tag{font-size:12px;font-weight:700;border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.v p{color:var(--fg2);margin:6px 0 12px;max-width:70ch}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+figure{margin:0}
+img{display:block;width:100%;border-radius:10px;border:1px solid var(--line)}
+figcaption{font-size:13px;font-weight:700;color:var(--fg2);margin-top:5px}
+figcaption.aft{color:#C94C0A}
+:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (max-width:760px){.pair{grid-template-columns:minmax(0,1fr)}}
+</style></head><body><div class="w">
+<h1>Where the backgrounds could go</h1>
+<p class="lead">Eight places in the current design, each shown now and with a background added. Keep the ones you like. The pages people work in all day are left calm on purpose. Select a screen to open it live.</p>
+<section class="v" id="sign-in"><div class="vh"><h2>1. Sign in</h2><span class="tag">Horizon</span></div><p>A warm welcome behind the sign-in card, carrying the home page feel into the app.</p>
+    <div class="pair"><figure><a href="before/sign-in.html"><img src="shots/sign-in-before.jpg" alt="Sign in, now" loading="lazy"></a><figcaption>Now</figcaption></figure>
+    <figure><a href="after/sign-in.html"><img src="shots/sign-in-after.jpg" alt="Sign in, with Horizon" loading="lazy"></a><figcaption class="aft">With Horizon</figcaption></figure></div></section>
+<section class="v" id="register"><div class="vh"><h2>2. Create workspace</h2><span class="tag">Horizon</span></div><p>The side panel gets the same horizon glow, so sign-up and sign-in match.</p>
+    <div class="pair"><figure><a href="before/register.html"><img src="shots/register-before.jpg" alt="Create workspace, now" loading="lazy"></a><figcaption>Now</figcaption></figure>
+    <figure><a href="after/register.html"><img src="shots/register-after.jpg" alt="Create workspace, with Horizon" loading="lazy"></a><figcaption class="aft">With Horizon</figcaption></figure></div></section>
+<section class="v" id="failures"><div class="vh"><h2>3. Home, "When a run fails" band</h2><span class="tag">Fine grid</span></div><p>A faint grid gives the failure section a technical, investigative feel.</p>
+    <div class="pair"><figure><a href="before/index.html"><img src="shots/failures-before.jpg" alt="Home, "When a run fails" band, now" loading="lazy"></a><figcaption>Now</figcaption></figure>
+    <figure><a href="after/index.html"><img src="shots/failures-after.jpg" alt="Home, "When a run fails" band, with Fine grid" loading="lazy"></a><figcaption class="aft">With Fine grid</figcaption></figure></div></section>
+<section class="v" id="closing"><div class="vh"><h2>4. Home, closing section</h2><span class="tag">Horizon</span></div><p>The page ends on a sunset glow behind the last call to action.</p>
+    <div class="pair"><figure><a href="before/index.html"><img src="shots/closing-before.jpg" alt="Home, closing section, now" loading="lazy"></a><figcaption>Now</figcaption></figure>
+    <figure><a href="after/index.html"><img src="shots/closing-after.jpg" alt="Home, closing section, with Horizon" loading="lazy"></a><figcaption class="aft">With Horizon</figcaption></figure></div></section>
+<section class="v" id="docs"><div class="vh"><h2>5. Docs, top of page</h2><span class="tag">Fine grid (light)</span></div><p>A light grid that fades out under the header, so Docs feels part of the product.</p>
+    <div class="pair"><figure><a href="before/docs.html"><img src="shots/docs-before.jpg" alt="Docs, top of page, now" loading="lazy"></a><figcaption>Now</figcaption></figure>
+    <figure><a href="after/docs.html"><img src="shots/docs-after.jpg" alt="Docs, top of page, with Fine grid (light)" loading="lazy"></a><figcaption class="aft">With Fine grid (light)</figcaption></figure></div></section>
+<section class="v" id="no-access"><div class="vh"><h2>6. "No access" page</h2><span class="tag">Grain and spotlight</span></div><p>A page people rarely see, so a little character helps it feel designed rather than broken.</p>
+    <div class="pair"><figure><a href="before/team.html"><img src="shots/no-access-before.jpg" alt=""No access" page, now" loading="lazy"></a><figcaption>Now</figcaption></figure>
+    <figure><a href="after/team.html"><img src="shots/no-access-after.jpg" alt=""No access" page, with Grain and spotlight" loading="lazy"></a><figcaption class="aft">With Grain and spotlight</figcaption></figure></div></section>
+<section class="v" id="empty"><div class="vh"><h2>7. Empty state (no workflows match)</h2><span class="tag">Flow lines</span></div><p>Faint workflow lines fill the empty space exactly when there is nothing else to show.</p>
+    <div class="pair"><figure><a href="before/workflows.html"><img src="shots/empty-before.jpg" alt="Empty state (no workflows match), now" loading="lazy"></a><figcaption>Now</figcaption></figure>
+    <figure><a href="after/workflows.html"><img src="shots/empty-after.jpg" alt="Empty state (no workflows match), with Flow lines" loading="lazy"></a><figcaption class="aft">With Flow lines</figcaption></figure></div></section>
+<section class="v" id="replay"><div class="vh"><h2>8. Execution details, replay panel</h2><span class="tag">Fine grid</span></div><p>The dark replay area already looks like a canvas; a grid makes it read like one.</p>
+    <div class="pair"><figure><a href="before/execution-details.html"><img src="shots/replay-before.jpg" alt="Execution details, replay panel, now" loading="lazy"></a><figcaption>Now</figcaption></figure>
+    <figure><a href="after/execution-details.html"><img src="shots/replay-after.jpg" alt="Execution details, replay panel, with Fine grid" loading="lazy"></a><figcaption class="aft">With Fine grid</figcaption></figure></div></section>
+</div></body></html>
