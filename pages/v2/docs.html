@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Docs | FlowBridge</title>
+<script>(function(){var s='';try{s=localStorage.getItem('fb-role')||''}catch(e){}if(s||/fb-role:/.test(window.name))document.documentElement.classList.add('fb-wait')})()</script>
+<link rel="stylesheet" href="assets/flowbridge.css">
+
+<style>body{margin:0}.fb-wait #root{visibility:hidden}
+body{margin:0;background:var(--surface)}
+.d-g{max-width:1100px;margin:0 auto;padding:40px 24px 72px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:48px;align-items:start}
+.d-side{display:flex;flex-direction:column;gap:2px;position:sticky;top:88px}
+.d-t{border:0;background:none;text-align:left;padding:8px 10px;border-radius:var(--r);font-size:14px;font-weight:550;color:var(--ink-2)}
+.d-t:hover{background:var(--sunken);color:var(--ink)}
+.d-t.is-on{background:var(--brand-t);color:var(--brand-ink)}
+.d-art{max-width:64ch}
+.d-art h1{font-size:34px;line-height:1.1;font-weight:720;letter-spacing:-.035em}
+.d-art>p{font-size:16px;color:var(--ink-2);margin-top:12px;text-wrap:pretty}
+.d-pt{padding:18px 0;border-bottom:1px solid var(--line)}
+.d-pt b{display:block;font-size:15px;font-weight:650;margin-bottom:4px}
+.d-pt p{color:var(--ink-2);text-wrap:pretty}
+.d-art.is-wide{max-width:none}
+.d-art.is-wide>p,.d-art.is-wide .d-pts{max-width:64ch}
+.d-perm-h{font-size:20px;font-weight:680;letter-spacing:-.02em;margin-top:30px;scroll-margin-top:96px}
+.d-perm-s{color:var(--ink-2);margin:6px 0 14px;max-width:64ch;text-wrap:pretty}
+@media (max-width:820px){
+  .d-g{grid-template-columns:minmax(0,1fr);padding:20px 16px 56px;gap:20px}
+  .d-side{position:static;flex-direction:row;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px}
+  .d-t{white-space:nowrap}
+  .d-art h1{font-size:28px}
+}
+body{margin:0}
+.s-nav{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line)}
+.s-in{max-width:1200px;margin:0 auto;height:64px;padding:0 24px;display:flex;align-items:center;gap:28px}
+.s-brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;letter-spacing:-.02em;color:var(--ink)}
+.s-brand:hover{text-decoration:none}
+.s-links{display:flex;align-items:center;gap:2px}
+.s-l{display:inline-flex;align-items:center;gap:5px;height:36px;padding:0 11px;border:0;background:none;border-radius:var(--r);font-size:14px;font-weight:550;color:var(--ink-2)}
+.s-l:hover{background:var(--sunken);color:var(--ink);text-decoration:none}
+.s-act{margin-left:auto;display:flex;align-items:center;gap:6px}
+.s-act .btn{height:36px}
+.s-nav.is-dark{background:rgba(20,16,12,.93);border-color:rgba(255,255,255,.1)}
+.is-dark .s-brand{color:#fff}.is-dark .s-l{color:#DCD6D1}.is-dark .s-l:hover{background:rgba(255,255,255,.1);color:#fff}
+.is-dark .s-act .btn-g{color:#F3F0ED}.is-dark .s-act .btn-g:hover{background:rgba(255,255,255,.12);color:#fff}
+.s-burger{display:none}
+.s-sheet{display:none}
+@media (max-width:820px){
+  .s-in{padding:0 16px;gap:10px}
+  .s-links,.s-signin{display:none}
+  .s-burger{display:inline-flex}
+  .s-sheet{display:flex;flex-direction:column;padding:8px 16px 16px;border-top:1px solid var(--line);background:var(--surface)}
+  .s-sheet a{padding:11px 4px;font-size:15px;font-weight:550;color:var(--ink);border-bottom:1px solid var(--line)}
+  .s-sheet a:last-child{border-bottom:0}
+}
+body{margin:0}
+.sf{background:#14100C;color:#CAC4BF;border-top:1px solid #3B342D}
+.sf-in{max-width:1240px;margin:0 auto;padding:56px 28px 26px}
+.sf-g{display:grid;grid-template-columns:minmax(0,1.7fr) repeat(3,minmax(0,1fr));gap:36px}
+.sf-brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:17px;letter-spacing:-.02em;color:#fff;width:fit-content}
+.sf-brand:hover{color:#fff;text-decoration:none}
+.sf-tag{margin:14px 0 0;font-size:14.5px;line-height:1.5;max-width:34ch;text-wrap:pretty}
+.sf-h{font:500 12px var(--mono);color:#A79F98;margin:2px 0 12px}
+.sf-l{display:flex;flex-direction:column;gap:9px;align-items:flex-start}
+.sf-l a{color:#E6E2DE;font-size:14px;font-weight:500}
+.sf-l a:hover{color:#fff;text-decoration:underline}
+.sf-b{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px;margin-top:44px;padding-top:18px;border-top:1px solid #3B342D;font-size:13px;color:#A79F98}
+@media (max-width:820px){.sf-in{padding:44px 16px 22px}.sf-g{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px}.sf-main{grid-column:1/-1}}</style>
+</head>
+<body>
+<div id="root"><div style="background:var(--surface);min-height:100vh"><div style="position:sticky;top:0;z-index:30"><header class="s-nav "><div class="s-in"><a class="s-brand" href="index.html" aria-label="FlowBridge home"><svg viewBox="0 0 28 28" aria-hidden="true" style="width:28px;height:28px"><rect width="28" height="28" rx="7" style="fill:#C2410C"></rect><path d="M6.5 18.5C9 9.5 19 9.5 21.5 18.5" style="fill:none;stroke:#FFFFFF;stroke-width:2.4;stroke-linecap:round"></path><circle cx="6.5" cy="19" r="2.6" style="fill:#FFFFFF"></circle><circle cx="21.5" cy="19" r="2.6" style="fill:#FFFFFF"></circle></svg>FlowBridge</a><nav class="s-links" aria-label="Main"><div style="position:relative"><button class="s-l" aria-expanded="false">Use cases<svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;display:block;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M6 9l6 6 6-6"></path></svg></button></div><a class="s-l" href="docs.html">Docs</a><div style="position:relative"><button class="s-l" aria-expanded="false">More<svg viewBox="0 0 24 24" aria-hidden="true" style="width:14px;height:14px;display:block;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M6 9l6 6 6-6"></path></svg></button></div></nav><div class="s-act"><a class="btn btn-g s-signin" href="sign-in.html">Sign in</a><a class="btn btn-p" href="register.html">Get started</a><button class="btn btn-g btn-ic s-burger" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true" style="width:18px;height:18px;display:block;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M3 5h.01M3 12h.01M3 19h.01M8 5h13M8 12h13M8 19h13"></path></svg></button></div></div></header></div><div class="d-g"><nav class="d-side" aria-label="Documentation topics"><button class="d-t is-on" aria-current="page">Getting started</button><button class="d-t " aria-current="false">Workflows and steps</button><button class="d-t " aria-current="false">Publishing and versions</button><button class="d-t " aria-current="false">When a run fails</button><button class="d-t " aria-current="false">Team and roles</button></nav><article class="d-art "><h1>Getting started</h1><p>Build and publish your first workflow in four steps.</p><div class="d-pts" style="margin-top:14px"><div class="d-pt"><b>1. Create your workspace</b><p>Sign up with your work email. Your workspace holds your workflows, connected apps and team.</p></div><div class="d-pt"><b>2. Start a workflow</b><p>Pick a template, or open a blank canvas and add a trigger: the event that starts the workflow.</p></div><div class="d-pt"><b>3. Add and connect steps</b><p>Add steps from the panel on the left, then draw a line from one to the next. Open a step to fill in its settings.</p></div><div class="d-pt"><b>4. Test, then publish</b><p>Click Test workflow to try it with sample data. When it works, click Publish to make it live.</p></div></div><button class="btn" style="margin-top:22px">Next: Workflows and steps<svg viewBox="0 0 24 24" aria-hidden="true" style="width:15px;height:15px;display:block;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></button></article></div><footer class="sf"><div class="sf-in"><div class="sf-g"><div class="sf-main"><a class="sf-brand" href="index.html" aria-label="FlowBridge home"><svg viewBox="0 0 28 28" aria-hidden="true" style="width:28px;height:28px"><rect width="28" height="28" rx="7" style="fill:#C2410C"></rect><path d="M6.5 18.5C9 9.5 19 9.5 21.5 18.5" style="fill:none;stroke:#FFFFFF;stroke-width:2.4;stroke-linecap:round"></path><circle cx="6.5" cy="19" r="2.6" style="fill:#FFFFFF"></circle><circle cx="21.5" cy="19" r="2.6" style="fill:#FFFFFF"></circle></svg>FlowBridge</a><p class="sf-tag">Automate the work between your apps, and see every step it takes.</p></div><nav aria-label="Product"><div class="sf-h">PRODUCT</div><div class="sf-l"><a href="index.html#use-cases">Use cases</a><a href="index.html#how">How it works</a><a href="index.html#failures">When a run fails</a><a href="index.html#integrations">Integrations</a></div></nav><nav aria-label="Learn"><div class="sf-h">LEARN</div><div class="sf-l"><a href="docs.html">Docs</a><a href="docs.html">Getting started</a><a href="templates.html">Templates</a></div></nav><nav aria-label="Account"><div class="sf-h">ACCOUNT</div><div class="sf-l"><a href="sign-in.html">Sign in</a><a href="register.html">Create a workspace</a><a href="overview.html">Dashboard</a></div></nav></div><div class="sf-b"><span>© 2026 FlowBridge</span><span>Design prototype. All data shown is sample data.</span></div></div></footer></div></div>
+<script src="assets/react.js"></script>
+<script src="assets/react-dom.js"></script>
+<script src="assets/flowbridge.js"></script>
+<script>FB.mount("Docs");</script>
+<a href="../index.html" style="position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:9999;display:inline-flex;align-items:center;height:30px;padding:0 13px;border-radius:15px;background:#111;color:#fff;font:600 12px/1 -apple-system,Segoe UI,Roboto,Arial,sans-serif;text-decoration:none;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.35)">Option 2, Dark sidebar &middot; Back to all options</a></body>
+</html>
