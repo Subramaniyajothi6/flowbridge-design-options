@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>FlowBridge Colour Clean-up</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#F7F3EE;--fg:#1F1A16;--fg2:#5E5348;--line:#E3D9CF;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#15110E;--fg:#F3EEE9;--fg2:#B5ABA2;--line:#3A312A;--card:#1E1813;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 Manrope,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:1320px;margin:0 auto;padding:40px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.1;letter-spacing:-.03em;margin:0;font-weight:800;text-wrap:balance}
+.lead{color:var(--fg2);max-width:70ch;margin:10px 0 0}
+ol{margin:18px 0 0;padding:16px 20px 16px 36px;background:var(--card);border:1px solid var(--line);border-radius:14px;max-width:80ch;display:flex;flex-direction:column;gap:6px}
+ol b{font-weight:800}
+.sw{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin:0 2px;border:1px solid rgba(0,0,0,.1)}
+.v{margin-top:36px;padding-top:20px;border-top:1px solid var(--line)}
+h2{font-size:22px;letter-spacing:-.02em;margin:0 0 12px;font-weight:800}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+figure{margin:0}
+img{display:block;width:100%;border-radius:10px;border:1px solid var(--line)}
+figcaption{font-size:13px;font-weight:700;color:var(--fg2);margin-top:5px}
+figcaption.aft{color:#C2410C}
+:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media (max-width:760px){.pair{grid-template-columns:minmax(0,1fr)}}
+</style></head><body><div class="w">
+<h1>Colour clean-up: before and after</h1>
+<p class="lead">The same pages side by side. Only colours change; layout and wording stay the same. Select any screen to open it live.</p>
+<ol>
+<li><b>Error</b> moves to a cooler crimson red <span class="sw" style="background:#BE1E2D"></span>→<span class="sw" style="background:#B0173F"></span>, so failures can't be mistaken for orange buttons.</li>
+<li><b>Warning</b> moves to a yellower amber <span class="sw" style="background:#D9920F"></span>→<span class="sw" style="background:#E3AE14"></span>, clearly apart from orange.</li>
+<li><b>Links and small labels</b> become warm dark text with a subtle underline. Orange stays for buttons and the selected item.</li>
+<li><b>One light orange tint</b> for selected and hover backgrounds, and data fields become neutral instead of rust.</li>
+</ol>
+<section class="v" id="index"><h2>Home</h2>
+    <div class="pair"><figure><a href="before/index.html"><img src="shots/index-before.jpg" alt="Home, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/index.html"><img src="shots/index-after.jpg" alt="Home, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="overview"><h2>Overview</h2>
+    <div class="pair"><figure><a href="before/overview.html"><img src="shots/overview-before.jpg" alt="Overview, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/overview.html"><img src="shots/overview-after.jpg" alt="Overview, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="executions"><h2>Executions</h2>
+    <div class="pair"><figure><a href="before/executions.html"><img src="shots/executions-before.jpg" alt="Executions, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/executions.html"><img src="shots/executions-after.jpg" alt="Executions, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="execution-details"><h2>Execution details</h2>
+    <div class="pair"><figure><a href="before/execution-details.html"><img src="shots/execution-details-before.jpg" alt="Execution details, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/execution-details.html"><img src="shots/execution-details-after.jpg" alt="Execution details, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="analytics"><h2>Analytics</h2>
+    <div class="pair"><figure><a href="before/analytics.html"><img src="shots/analytics-before.jpg" alt="Analytics, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/analytics.html"><img src="shots/analytics-after.jpg" alt="Analytics, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="integrations"><h2>Integrations</h2>
+    <div class="pair"><figure><a href="before/integrations.html"><img src="shots/integrations-before.jpg" alt="Integrations, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/integrations.html"><img src="shots/integrations-after.jpg" alt="Integrations, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="workflows"><h2>Workflows</h2>
+    <div class="pair"><figure><a href="before/workflows.html"><img src="shots/workflows-before.jpg" alt="Workflows, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/workflows.html"><img src="shots/workflows-after.jpg" alt="Workflows, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="builder"><h2>Workflow builder</h2>
+    <div class="pair"><figure><a href="before/builder.html"><img src="shots/builder-before.jpg" alt="Workflow builder, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/builder.html"><img src="shots/builder-after.jpg" alt="Workflow builder, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="node-configuration"><h2>Step settings</h2>
+    <div class="pair"><figure><a href="before/node-configuration.html"><img src="shots/node-configuration-before.jpg" alt="Step settings, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/node-configuration.html"><img src="shots/node-configuration-after.jpg" alt="Step settings, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+<section class="v" id="docs"><h2>Docs</h2>
+    <div class="pair"><figure><a href="before/docs.html"><img src="shots/docs-before.jpg" alt="Docs, before" loading="lazy"></a><figcaption>Before</figcaption></figure>
+    <figure><a href="after/docs.html"><img src="shots/docs-after.jpg" alt="Docs, after" loading="lazy"></a><figcaption class="aft">After</figcaption></figure></div></section>
+</div></body></html>
